@@ -1,0 +1,23 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador Autenticado" as ua
+
+activate ua
+ua->"System": Aceitar ou rejeitar  introdução
+activate "System"
+"System"-->ua: Mostra  introdução
+deactivate "System"
+ua->"System": Aceita ou rejeita a introdução
+activate "System"
+"System"-->ua: Valida a resposta do utilizador e pede confirmação
+deactivate "System"
+ua->"System": Confirma
+activate "System"
+"System"-->ua: Regista a aprovação ou rejeição da introdução e informa de operação bem sucedida
+
+
+deactivate "System"
+deactivate ua
+@enduml

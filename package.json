@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@material/select": "^13.0.0",
+    "ngx-mat-select-search": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/mocha": "^9.1.0"
+  }
+}

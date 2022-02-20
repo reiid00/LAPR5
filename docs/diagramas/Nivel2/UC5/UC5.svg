@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="347px" preserveAspectRatio="none" style="width:409px;height:347px;background:#FFFFFF;" version="1.1" viewBox="0 0 409 347" width="409px" zoomAndPan="magnify"><defs><filter height="300%" id="fd508r6yr8j27" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fd508r6yr8j27)" height="232.8125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="15" y="51.6094"/><rect fill="#FFFFFF" filter="url(#fd508r6yr8j27)" height="232.8125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="185" y="51.6094"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="20" x2="20" y1="41.6094" y2="302.4219"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="189.5" x2="189.5" y1="41.6094" y2="302.4219"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="376" x2="376" y1="41.6094" y2="302.4219"/><rect fill="#FEFECE" filter="url(#fd508r6yr8j27)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="26" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="12" y="26.5332">UI</text><rect fill="#FEFECE" filter="url(#fd508r6yr8j27)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="26" x="5" y="301.4219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="12" y="322.9551">UI</text><rect fill="#FEFECE" filter="url(#fd508r6yr8j27)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="45" x="165.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="172.5" y="26.5332">MDR</text><rect fill="#FEFECE" filter="url(#fd508r6yr8j27)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="45" x="165.5" y="301.4219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="172.5" y="322.9551">MDR</text><rect fill="#FEFECE" filter="url(#fd508r6yr8j27)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="42" x="353" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="360" y="26.5332">ARS</text><rect fill="#FEFECE" filter="url(#fd508r6yr8j27)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="42" x="353" y="301.4219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="360" y="322.9551">ARS</text><rect fill="#FFFFFF" filter="url(#fd508r6yr8j27)" height="232.8125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="15" y="51.6094"/><rect fill="#FFFFFF" filter="url(#fd508r6yr8j27)" height="232.8125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="185" y="51.6094"/><polygon fill="#A80036" points="173,69.9609,183,73.9609,173,77.9609,177,73.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="25" x2="179" y1="73.9609" y2="73.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="32" y="69.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="43" y="69.1045">.get(/api/users/perfil)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="195" x2="237" y1="120.6641" y2="120.6641"/><line style="stroke:#A80036;stroke-width:1.0;" x1="237" x2="237" y1="120.6641" y2="133.6641"/><line style="stroke:#A80036;stroke-width:1.0;" x1="196" x2="237" y1="133.6641" y2="133.6641"/><polygon fill="#A80036" points="206,129.6641,196,133.6641,206,137.6641,202,133.6641" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="202" y="107.6318">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="213" y="99.4561">lida com o request body,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="217" y="115.8076">vai buscar o perfil do user</text><polygon fill="#A80036" points="36,160.0156,26,164.0156,36,168.0156,32,164.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="30" x2="184" y1="164.0156" y2="164.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="42" y="159.1592">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="53" y="159.1592">status da resposta</text><polygon fill="#A80036" points="173,190.3672,183,194.3672,173,198.3672,177,194.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="25" x2="179" y1="194.3672" y2="194.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="32" y="189.5107">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="43" y="189.5107">.post(/api/users/perfil)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="195" x2="237" y1="241.0703" y2="241.0703"/><line style="stroke:#A80036;stroke-width:1.0;" x1="237" x2="237" y1="241.0703" y2="254.0703"/><line style="stroke:#A80036;stroke-width:1.0;" x1="196" x2="237" y1="254.0703" y2="254.0703"/><polygon fill="#A80036" points="206,250.0703,196,254.0703,206,258.0703,202,254.0703" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="202" y="228.0381">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="213" y="219.8623">lida com o request body,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="217" y="236.2139">atualiza o perfil</text><polygon fill="#A80036" points="31,280.4219,21,284.4219,31,288.4219,27,284.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="25" x2="189" y1="284.4219" y2="284.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="37" y="279.5654">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="48" y="279.5654">status da resposta</text><!--MD5=[5591deaf8be6c028e397a07eddd537a0]
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+ui->mdr: .get(/api/users/perfil)
+mdr->mdr: lida com o request body,\n vai buscar o perfil do user
+mdr- ->ui: status da resposta
+ui->mdr: .post(/api/users/perfil)
+mdr->mdr: lida com o request body,\n atualiza o perfil
+mdr- ->ui: status da resposta
+deactivate ui
+deactivate mdr
+@enduml
+
+@startuml
+autonumber
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+ui->mdr: .get(/api/users/perfil)
+mdr->mdr: lida com o request body,\n vai buscar o perfil do user
+mdr- ->ui: status da resposta
+ui->mdr: .post(/api/users/perfil)
+mdr->mdr: lida com o request body,\n atualiza o perfil
+mdr- ->ui: status da resposta
+deactivate ui
+deactivate mdr
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 13:40:07 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

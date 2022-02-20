@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "2caf387e-7452-4b35-b98a-de5489e8f555",
+		"name": "PostTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const autorId = pm.variables.replaceIn(\"{{$guid}}\");\r",
+							"const texto = pm.variables.replaceIn(\"{{$randomCity}}\");\r",
+							"const likes = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+							"const dislikes = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+							"\r",
+							"\r",
+							"console.log(\"Randomly-generated author id: \" + autorId);\r",
+							"console.log(\"Randomly-generated texto: \" + texto);\r",
+							"console.log(\"Randomly-generated likes: \" + likes);\r",
+							"console.log(\"Randomly-generated dislikes: \" + dislikes);\r",
+							"\r",
+							"pm.environment.set(\"autorId\", autorId);\r",
+							"pm.environment.set(\"texto_post\", texto);\r",
+							"pm.environment.set(\"likes\", likes);\r",
+							"pm.environment.set(\"dislikes\", dislikes);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body returns the correct authorId\", function () {\r",
+							"    pm.expect(responseJson.autorId).to.eql(pm.environment.get(\"autorId\"));\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"p_id\", responseJson.id); // save the category's id for further tests\r",
+							"\r",
+							"console.log(pm.environment.get(\"p_id\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"texto\":\"{{texto_post}}\",\r\n    \"tags\":[\"test\"],\r\n    \"likes\":0,\r\n    \"dislikes\":0,\r\n    \"autorId\":\"{{autorId}}\",\r\n    \"likesUsers\":[],\r\n    \"dislikesUsers\":[]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10628/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10628",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get created Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10628/api/posts/{{autorId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10628",
+					"path": [
+						"api",
+						"posts",
+						"{{autorId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT post",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const texto = pm.variables.replaceIn(\"{{$randomCity}}\");\r",
+							"const likes = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+							"const dislikes = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+							"\r",
+							"console.log(\"Randomly-generated texto: \" + texto);\r",
+							"console.log(\"Randomly-generated likes: \" + likes);\r",
+							"console.log(\"Randomly-generated dislikes: \" + dislikes);\r",
+							"\r",
+							"pm.environment.set(\"texto_post\", texto);\r",
+							"pm.environment.set(\"likes\", likes);\r",
+							"pm.environment.set(\"dislikes\", dislikes);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body returns the correct authorId\", function () {\r",
+							"    pm.expect(responseJson.autorId).to.eql(pm.environment.get(\"autorId\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body returns the correct texto\", function () {\r",
+							"    pm.expect(responseJson.texto).to.eql(pm.environment.get(\"texto_post\"));\r",
+							"});\r",
+							"pm.test(\"Body returns the correct likes\", function () {\r",
+							"    pm.expect(responseJson.likes).to.eql(0);\r",
+							"});\r",
+							"pm.test(\"Body returns the correct dislikes\", function () {\r",
+							"    pm.expect(responseJson.dislikes).to.eql(0);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{p_id}}\",\r\n    \"texto\":\"{{texto_post}}\",\r\n    \"tags\":[\"test\"],\r\n    \"comentarios\":[\"{{c_id}}\"],\r\n    \"likes\":0,\r\n    \"dislikes\":0,\r\n    \"autorId\":\"{{autorId}}\",\r\n    \"likesUsers\":[\"user1\"],\r\n    \"dislikesUsers\":[\"user2\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10628/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10628",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Id is correct\", function(){\r",
+							"    pm.expect(responseJson).to.eql(pm.environment.get(\"p_id\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10628/api/posts/delete/{{p_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10628",
+					"path": [
+						"api",
+						"posts",
+						"delete",
+						"{{p_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

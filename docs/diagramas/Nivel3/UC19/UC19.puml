@@ -1,0 +1,32 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "Caminho" as cam
+    participant "Controller" as ctrl
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:get(/api/caminhos)
+    activate mdr
+
+    mdr->cam: get
+    activate cam
+    cam->ctrl:getCaminhoMaisSeguro
+    activate ctrl
+    ctrl->ctrl: recebe o request body
+		ctrl->repo: findAll
+    activate repo
+    repo->repo: consulta a DB
+    repo-->ctrl: anexa o caminho ao response body
+    deactivate repo
+    ctrl-->cam: return
+    deactivate ctrl
+    cam-->mdr: status 200
+    deactivate cam
+    mdr-->ui: mostra o caminho mais seguro
+    deactivate mdr
+    deactivate ui
+@enduml

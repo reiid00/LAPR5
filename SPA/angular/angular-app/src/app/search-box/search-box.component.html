@@ -1,0 +1,36 @@
+<!-- <mat-form-field>
+    <mat-select [formControl]="userCtrl" placeholder="User Name" #singleSelect>
+      <mat-option>
+        <ngx-mat-select-search [formControl]="userFilterCtrl"></ngx-mat-select-search>
+      </mat-option>
+      <mat-option *ngFor="let user of filteredUsers | async" [value]="user">
+        {{user.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+  <div class="container text-center">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="search-box">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Search for a user by name">
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>User Name</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users | filter:searchText">
+          <td><a [routerLink]="['/user-profile',user.id]"> {{user.nome}}</a></td>
+          <button (click)="addUser(user.id)">Add </button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+<h2>END OF PAGE</h2>

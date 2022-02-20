@@ -1,0 +1,19 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+
+    activate ui
+		ui->mdr:get matching users
+    activate mdr
+    mdr->ui: display matching users
+    deactivate mdr
+    ui->mdr: escolhe user para adicionar
+    activate mdr
+		mdr->mdr:regista relacao
+    mdr->ui: display success status
+    deactivate mdr
+    deactivate ui
+    @enduml

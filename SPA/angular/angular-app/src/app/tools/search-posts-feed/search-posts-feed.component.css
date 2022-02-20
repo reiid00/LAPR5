@@ -1,0 +1,13 @@
+textarea {
+    font-size: 1.0em;
+    padding: 1em;
+    resize: none;
+    width: 230px;
+    height: 50px;
+    outline: none;
+}
+#table-scrow{ overflow-x:scroll} 
+.tableContainerDiv {
+    overflow: auto;
+    max-height: 80em;
+ }

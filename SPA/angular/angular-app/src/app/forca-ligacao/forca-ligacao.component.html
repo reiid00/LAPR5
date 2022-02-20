@@ -1,0 +1,54 @@
+<div class="container text-center">
+    <h1>{{title}}</h1>
+  </div>
+  <div><h3>Escolher Utilizador</h3></div>
+  <div class="container">
+      
+    <div class="row">
+      <div class="search-box">
+        <input class="form-control" type="text" name="search" #searchUser="ngModel" [(ngModel)]="searchText" autocomplete="off" placeholder= "Search for a user by name">
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Utilizador</th>
+          <th>Escolher Utilizador</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users | filter:searchText">
+          <td><a [routerLink]="['/user-profile',user.id]"> {{user.nome}}</a></td>
+          <button data-testid="buttonEscolherUser" (click)="addUser(user)">Escolher </button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+  <div class="container" *ngIf="userChosen">
+    <div><h3>Escolher Amigo</h3></div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Utilizador</th>
+          <th>Escolher Utilizador</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of userFriends ; index as i">
+          <td (onCreate)="getUserNome(user)"> {{userSelectedList[i]}}</td>
+          <button data-testid="buttonEscolherAmigo" (click)="escolherAmigo(user,userSelectedList[i])">Escolher {{i}} </button>
+        </tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="container" *ngIf="amigoChosen">
+<h3 >Força entre {{userEscolhidoNome}} e {{amigoNome}} : {{userRelation.strength}} </h3>
+<h3> Força Total entre {{userEscolhidoNome}} e {{amigoNome}} : {{strengthTotal}}</h3>
+</div>
+
+<h2>END OF PAGE</h2>
+
+  
+

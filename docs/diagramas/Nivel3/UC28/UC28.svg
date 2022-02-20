@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="435px" preserveAspectRatio="none" style="width:892px;height:435px;background:#FFFFFF;" version="1.1" viewBox="0 0 892 435" width="892px" zoomAndPan="magnify"><defs><filter height="300%" id="fy3648m4mgptv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="321.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="15" y="51.6094"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="299.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="131" y="73.9609"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="238.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="237" y="104.3125"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="177.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="346" y="134.6641"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="775" y="208.3672"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="20" x2="20" y1="41.6094" y2="391.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="135.5" x2="135.5" y1="41.6094" y2="391.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="241.5" x2="241.5" y1="41.6094" y2="391.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="351" x2="351" y1="41.6094" y2="391.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="780" x2="780" y1="41.6094" y2="391.125"/><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="26" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="12" y="26.5332">UI</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="26" x="5" y="390.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="12" y="411.6582">UI</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="45" x="111.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="118.5" y="26.5332">MDR</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="45" x="111.5" y="390.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="118.5" y="411.6582">MDR</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="39" x="220.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="227.5" y="26.5332">Tag</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="39" x="220.5" y="390.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="227.5" y="411.6582">Tag</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="76" x="311" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="318" y="26.5332">Controller</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="76" x="311" y="390.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="318" y="411.6582">Controller</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="82" x="737" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="744" y="26.5332">Repository</text><rect fill="#FEFECE" filter="url(#fy3648m4mgptv)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="82" x="737" y="390.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="744" y="411.6582">Repository</text><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="321.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="15" y="51.6094"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="299.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="131" y="73.9609"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="238.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="237" y="104.3125"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="177.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="346" y="134.6641"/><rect fill="#FFFFFF" filter="url(#fy3648m4mgptv)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="775" y="208.3672"/><polygon fill="#A80036" points="119,69.9609,129,73.9609,119,77.9609,123,73.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="25" x2="125" y1="73.9609" y2="73.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="32" y="69.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="43" y="69.1045">get(/api/tags)</text><polygon fill="#A80036" points="225,100.3125,235,104.3125,225,108.3125,229,104.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="141" x2="231" y1="104.3125" y2="104.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="148" y="99.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="159" y="99.4561">get</text><polygon fill="#A80036" points="334,130.6641,344,134.6641,334,138.6641,338,134.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="247" x2="340" y1="134.6641" y2="134.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="254" y="129.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="265" y="129.8076">getAllTags()</text><line style="stroke:#A80036;stroke-width:1.0;" x1="356" x2="398" y1="165.0156" y2="165.0156"/><line style="stroke:#A80036;stroke-width:1.0;" x1="398" x2="398" y1="165.0156" y2="178.0156"/><line style="stroke:#A80036;stroke-width:1.0;" x1="357" x2="398" y1="178.0156" y2="178.0156"/><polygon fill="#A80036" points="367,174.0156,357,178.0156,367,182.0156,363,178.0156" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="363" y="160.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="374" y="160.1592">recebe o request body</text><polygon fill="#A80036" points="763,204.3672,773,208.3672,763,212.3672,767,208.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="356" x2="769" y1="208.3672" y2="208.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="363" y="203.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="374" y="203.5107">findAll</text><line style="stroke:#A80036;stroke-width:1.0;" x1="785" x2="827" y1="238.7188" y2="238.7188"/><line style="stroke:#A80036;stroke-width:1.0;" x1="827" x2="827" y1="238.7188" y2="251.7188"/><line style="stroke:#A80036;stroke-width:1.0;" x1="786" x2="827" y1="251.7188" y2="251.7188"/><polygon fill="#A80036" points="796,247.7188,786,251.7188,796,255.7188,792,251.7188" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="792" y="233.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="803" y="233.8623">consulta a DB</text><polygon fill="#A80036" points="367,278.0703,357,282.0703,367,286.0703,363,282.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="361" x2="779" y1="282.0703" y2="282.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="373" y="277.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="384" x="384" y="277.2139">anexa as tags das relações do próprio utilizador ao response body</text><polygon fill="#A80036" points="258,308.4219,248,312.4219,258,316.4219,254,312.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="252" x2="350" y1="312.4219" y2="312.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="264" y="307.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="33" x="275" y="307.5654">return</text><polygon fill="#A80036" points="152,338.7734,142,342.7734,152,346.7734,148,342.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="146" x2="241" y1="342.7734" y2="342.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="158" y="337.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="169" y="337.917">status 200</text><polygon fill="#A80036" points="31,369.125,21,373.125,31,377.125,27,373.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="25" x2="241" y1="373.125" y2="373.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="37" y="368.2686">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="174" x="55" y="368.2686">mostra a Tag Cloud resultante</text><!--MD5=[2672769e871a2993b87edeec61bb286b]
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "Tag" as tag
+    participant "Controller" as ctrl
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:get(/api/tags)
+    activate mdr
+
+    mdr->tag: get
+    activate tag
+    tag->ctrl:getAllTags()
+    activate ctrl
+    ctrl->ctrl: recebe o request body
+		ctrl->repo: findAll
+    activate repo
+    repo->repo: consulta a DB
+    repo- ->ctrl: anexa as tags das relações do próprio utilizador ao response body
+    deactivate repo
+    ctrl- ->tag: return
+    deactivate ctrl
+    tag- ->mdr: status 200
+    deactivate tag
+    tag- ->ui: mostra a Tag Cloud resultante
+    deactivate mdr
+    deactivate ui
+@enduml
+
+@startuml
+autonumber
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "Tag" as tag
+    participant "Controller" as ctrl
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:get(/api/tags)
+    activate mdr
+
+    mdr->tag: get
+    activate tag
+    tag->ctrl:getAllTags()
+    activate ctrl
+    ctrl->ctrl: recebe o request body
+		ctrl->repo: findAll
+    activate repo
+    repo->repo: consulta a DB
+    repo- ->ctrl: anexa as tags das relações do próprio utilizador ao response body
+    deactivate repo
+    ctrl- ->tag: return
+    deactivate ctrl
+    tag- ->mdr: status 200
+    deactivate tag
+    tag- ->ui: mostra a Tag Cloud resultante
+    deactivate mdr
+    deactivate ui
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

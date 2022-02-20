@@ -1,0 +1,48 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "UsersController" as ctrl
+    participant "Users" as usr
+    participant "RelationsController" as ctrlRel
+    participant "Relations" as rel
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:get(/users)
+    activate mdr
+
+    mdr->ctrl: get
+    activate ctrl
+    ctrl->usr:getUsersByName()
+    activate usr
+    usr->repo: get matching users
+    activate repo
+    repo->usr: return
+    deactivate repo
+    usr->ctrl: return
+    deactivate usr
+    ctrl->mdr: status 201
+    deactivate ctrl
+    mdr->ui: display matching users
+    deactivate mdr
+    ui->mdr: escolhe user para adicionar
+    activate mdr
+    mdr->ctrlRel: put
+    activate ctrlRel
+    ctrlRel->rel: addRelation()
+    activate rel
+    rel->repo: save
+    activate repo
+    repo->rel: return
+    deactivate repo
+    rel->ctrlRel:return
+    deactivate rel
+    ctrlRel->mdr: status 201
+    deactivate ctrlRel
+    mdr->ui: display success status
+    deactivate mdr
+    deactivate ui
+    @enduml

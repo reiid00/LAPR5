@@ -1,0 +1,14 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador autenticado" as u
+
+activate u
+u->":UI": Consultar Fortaleza de Rede
+activate ":UI"
+":UI"->":UI": Sucesso na execução da funcionalidade
+":UI"-->u: Mostra a dimensao de rede até nível 1
+deactivate ":UI"
+deactivate u
+@enduml

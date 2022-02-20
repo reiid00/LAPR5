@@ -1,0 +1,32 @@
+<table class = "table table-striped">
+    <thead>
+      <tr>
+        <th>New Suggested User</th>
+        <th>Tags In Commom</th>
+        <th>View More Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let newFriend of smallNewConexions; index as i">
+        <td>{{newFriend.nome}} </td>
+        <td> {{tagsInCommonNum[i]}} </td>
+        <td>
+          <button type="button" class="btn btn-light mr-1"(click) = "viewMoreDetails(newFriend,i)"> View {{newFriend.nome}}</button>
+        </td>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-light mr-1"(click) = "getNewSmallNewConexions()"> Refresh Suggested Users</button>
+
+    <div *ngIf="userChosenBool">
+      <p>name: {{userChosen.nome}}</p>
+      <p>Description: {{userChosen.descricao}}</p>
+      <button type="button" class="btn btn-light mr-1"(click) = "newFriendRequest(userChosen)"> Send Friend Request</button>
+
+
+
+    </div>
+  
+
+    
+<h2>END OF PAGE</h2>

@@ -1,0 +1,16 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador Autenticado" as ua
+
+activate ua
+ua->"System": Inicia consulta da lista de pedidos de ligação pendentes
+activate "System"
+"System"->"System": consulta executada com sucesso
+
+"System"-->ua: apresenta os pedidos de ligação pendentes
+deactivate "System"
+
+deactivate ua
+@enduml

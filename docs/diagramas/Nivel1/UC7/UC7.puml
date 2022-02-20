@@ -1,0 +1,15 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador Autenticado" as ua
+
+activate ua
+ua->"System": Seleciona consultar rede na perspetiva do user
+activate "System"
+"System"-->ua: apresenta a rede na perspetiva do user
+deactivate "System"
+
+deactivate "System"
+deactivate ua
+@enduml

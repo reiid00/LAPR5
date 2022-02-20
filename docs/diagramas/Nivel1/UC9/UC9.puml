@@ -1,0 +1,13 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador autorizado" as una
+
+activate una
+una->"System": Seleciona utilizadores objetivo
+activate "System"
+"System"->una: Mensagem de sucesso
+deactivate "System"
+deactivate una
+@enduml

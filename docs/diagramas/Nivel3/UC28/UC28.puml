@@ -1,0 +1,32 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "Tag" as tag
+    participant "Controller" as ctrl
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:get(/api/tags)
+    activate mdr
+
+    mdr->tag: get
+    activate tag
+    tag->ctrl:getAllTags()
+    activate ctrl
+    ctrl->ctrl: recebe o request body
+		ctrl->repo: findAll
+    activate repo
+    repo->repo: consulta a DB
+    repo-->ctrl: anexa as tags das relações do próprio utilizador ao response body
+    deactivate repo
+    ctrl-->tag: return
+    deactivate ctrl
+    tag-->mdr: status 200
+    deactivate tag
+    tag-->ui: mostra a Tag Cloud resultante
+    deactivate mdr
+    deactivate ui
+@enduml

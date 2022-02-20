@@ -1,0 +1,69 @@
+
+image: mcr.microsoft.com/dotnet/sdk:5.0
+
+pipelines:
+  default:
+    - parallel:
+       - step:
+          name: Build & Test - MDR
+          caches:
+              - dotnetcore
+          script:
+              - REPORTS_PATH=./test-reports/build_${BITBUCKET_BUILD_NUMBER}
+              - dotnet build MDR/21s5_df_32_proj/21s5_df_32_proj.csproj
+              - dotnet publish MDR/21s5_df_32_proj/21s5_df_32_proj.csproj --configuration Release
+              - dotnet test MDR/Tests/Tests.csproj
+    - step:
+        name: Build SPA
+        image: node:16.13.0
+        script:
+          - apt-get update -y
+          - apt-get install -y npm
+          - npm --prefix SPA/angular/angular-app install
+          - npm --prefix SPA/angular/angular-app run build
+        artifacts:
+        - SPA/angular/angular-app/**
+        - SPA/angular/angular-app/dist/angular-app/
+    - step:
+        name: Deploying SPA to DEI Cloud
+        script:
+          - pipe: atlassian/sftp-deploy:0.5.8
+            variables:
+              USER: 'root'
+              SERVER: 'vsgate-ssh.dei.isep.ipp.pt'
+              REMOTE_PATH: '/var/www/html/'
+              LOCAL_PATH: 'SPA/angular/angular-app/dist/angular-app/*'
+              EXTRA_ARGS: '-P 10820'
+          - pipe: atlassian/ssh-run:0.4.0
+            variables:
+              SSH_USER: 'root'
+              SERVER: 'vsgate-ssh.dei.isep.ipp.pt'
+              COMMAND: 'systemctl restart apache2'
+              PORT: '10820'
+    - step:
+        name: Build MDP
+        image: node:16.13.0
+        script:
+          - apt-get update -y
+          - apt-get install -y npm
+          - npm --prefix MDP/nunopsilva-bulletproof-nodejs-ddd-7663ba36a405/package.json install
+          - npm --prefix MDP/nunopsilva-bulletproof-nodejs-ddd-7663ba36a405/package.json run build
+        artifacts:
+        - MDP/nunopsilva-bulletproof-nodejs-ddd-7663ba36a405/**
+        - MDP/nunopsilva-bulletproof-nodejs-ddd-7663ba36a405/
+    - step:
+        name: Deploying MDP to DEI Cloud
+        script:
+          - pipe: atlassian/sftp-deploy:0.5.8
+            variables:
+              USER: 'root'
+              SERVER: 'vsgate-ssh.dei.isep.ipp.pt'
+              REMOTE_PATH: '/var/www/'
+              LOCAL_PATH: 'MDP/nunopsilva-bulletproof-nodejs-ddd-7663ba36a405/*'
+              EXTRA_ARGS: '-P 10368'
+          - pipe: atlassian/ssh-run:0.4.0
+            variables:
+              SSH_USER: 'root'
+              SERVER: 'vsgate-ssh.dei.isep.ipp.pt'
+              COMMAND: 'systemctl restart apache2;npm --prefix var/www/MDP/nunopsilva-bulletproof-nodejs-ddd-7663ba36a405/package.json install; npm --prefix var/www/MDP/nunopsilva-bulletproof-nodejs-ddd-7663ba36a405/package.json start'
+              PORT: '10368'

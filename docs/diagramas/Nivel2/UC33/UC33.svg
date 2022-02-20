@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="254px" preserveAspectRatio="none" style="width:510px;height:254px;" version="1.1" viewBox="0 0 510 254" width="510px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1uxcz72bllwyq" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#FFFFFF" filter="url(#f1uxcz72bllwyq)" height="145.1094" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="18" y="49.6094" />
+        <rect fill="#FFFFFF" filter="url(#f1uxcz72bllwyq)" height="145.1094" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="211" y="49.6094" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="23" x2="23" y1="39.6094" y2="212.7188" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="215.5" x2="215.5" y1="39.6094" y2="212.7188" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="480" x2="480" y1="39.6094" y2="212.7188" />
+        <rect fill="#FEFECE" filter="url(#f1uxcz72bllwyq)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="26" x="8" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="12" x="15" y="24.5332">UI</text>
+        <rect fill="#FEFECE" filter="url(#f1uxcz72bllwyq)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="26" x="8" y="211.7188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="12" x="15" y="233.252">UI</text>
+        <rect fill="#FEFECE" filter="url(#f1uxcz72bllwyq)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="191.5" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="198.5" y="24.5332">MDR</text>
+        <rect fill="#FEFECE" filter="url(#f1uxcz72bllwyq)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="191.5" y="211.7188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="198.5" y="233.252">MDR</text>
+        <rect fill="#FEFECE" filter="url(#f1uxcz72bllwyq)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="42" x="457" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="464" y="24.5332">ARS</text>
+        <rect fill="#FEFECE" filter="url(#f1uxcz72bllwyq)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="42" x="457" y="211.7188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="464" y="233.252">ARS</text>
+        <rect fill="#FFFFFF" filter="url(#f1uxcz72bllwyq)" height="145.1094" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="18" y="49.6094" />
+        <rect fill="#FFFFFF" filter="url(#f1uxcz72bllwyq)" height="145.1094" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="211" y="49.6094" />
+        <polygon fill="#A80036" points="199,67.9609,209,71.9609,199,75.9609,203,71.9609" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="28" x2="205" y1="71.9609" y2="71.9609" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="35" y="67.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="148" x="46" y="67.1045">.post(/api/users/requests)</text>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="221" x2="263" y1="151.3672" y2="151.3672" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="263" x2="263" y1="151.3672" y2="164.3672" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="222" x2="263" y1="164.3672" y2="164.3672" />
+        <polygon fill="#A80036" points="232,160.3672,222,164.3672,232,168.3672,228,164.3672" style="stroke: #A80036; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="228" y="121.9834">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="143" x="239" y="97.4561">lida com o request body,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="221" x="243" y="113.8076">aceita ou rejeita a introdução e guarda</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="174" x="243" y="130.1592">a relação entre os utilizadores</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="202" x="243" y="146.5107">na base de dados caso seja aceite</text>
+        <polygon fill="#A80036" points="34,190.7188,24,194.7188,34,198.7188,30,194.7188" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="28" x2="215" y1="194.7188" y2="194.7188" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="40" y="189.8623">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="108" x="51" y="189.8623">status da resposta</text>
+        <!--
+@startuml
+autonumber
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+ui->mdr: .post(/api/users/requests)
+mdr->mdr: lida com o request body,\n aceita ou rejeita a introdução e guarda \n a relação entre os utilizadores  \n na base de dados caso seja aceite
+mdr- ->ui: status da resposta
+deactivate ui
+deactivate mdr
+@enduml
+
+PlantUML version 1.2018.14(Fri Dec 21 16:33:16 WET 2018)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 15.0.2+7-27
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+-->
+    </g>
+</svg>

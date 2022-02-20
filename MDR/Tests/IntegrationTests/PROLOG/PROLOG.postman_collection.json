@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "e96478b6-8907-41e0-89c3-8e9abaefed0f",
+		"name": "PROLOG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4300/api/RedeUtilizador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"result\", \"6\");\r",
+							"\r",
+							"pm.test(\"Result is 6\", function () {\r",
+							"    pm.expect(responseJson.size).to.eql(pm.environment.get(\"result\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\":1,\r\n    \"n\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/api/RedeUtilizador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"RedeUtilizador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4300/api/CaminhoMaisForte",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"rede\",[1,11,21,31,42,200]);\r",
+							"\r",
+							"pm.test(\"Result Test\", function () {\r",
+							"    pm.expect(responseJson.rede).to.eql(pm.environment.get(\"rede\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"origId\":1,\r\n    \"destId\":200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/api/CaminhoMaisForte",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"CaminhoMaisForte"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4300/api/SugerirLigaoes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"users\",[22,31,32]);\r",
+							"\r",
+							"pm.test(\"Result Test\", function () {\r",
+							"    pm.expect(responseJson.rede).to.eql(pm.environment.get(\"users\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\":12,\r\n    \"nivel\":\"3\",\r\n    \"nTags\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4300/api/SugerirLigacoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"SugerirLigacoes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

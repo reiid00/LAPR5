@@ -1,0 +1,20 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+ui->mdr: .get(/api/users/perfil)
+mdr->mdr: lida com o request body,\n vai buscar o perfil do user
+mdr-->ui: status da resposta
+ui->mdr: .post(/api/users/perfil)
+mdr->mdr: lida com o request body,\n atualiza o perfil
+mdr-->ui: status da resposta
+deactivate ui
+deactivate mdr
+@enduml

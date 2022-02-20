@@ -1,0 +1,16 @@
+<div class="container">
+    <header class="jumbotron">
+      <h3>
+        <strong>{{ user.nome }}</strong> Perfil
+      </h3>
+    </header>
+    <p>
+      <strong>Email:</strong>
+      {{ user.email }}
+    </p>
+    
+  </div>
+  
+  <ng-template #loggedOut>
+    Please login.
+  </ng-template>

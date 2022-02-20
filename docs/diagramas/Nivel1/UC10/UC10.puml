@@ -1,0 +1,17 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador autorizado" as una
+
+activate una
+una->"System": Pesquisa por utilizadores
+activate "System"
+"System"->una: Apresenta utilizadores correspondentes
+deactivate "System"
+una->"System": Adiciona utilizador
+activate "System"
+"System"->una: Grava alteracoes e apresenta mensagem de sucesso
+deactivate "System"
+deactivate una
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+ui->mdr: .post(/api/users)
+mdr->mdr: lida com o request body,\n cria um user e salva o\n mesmo na base de dados
+mdr-->ui: status da resposta
+deactivate ui
+deactivate mdr
+@enduml

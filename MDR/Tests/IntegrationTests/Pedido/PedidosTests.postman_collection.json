@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "d47a0b90-46e5-4146-b83e-ac140b5b4114",
+		"name": "PedidosTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Perfect Scenario Test",
+			"item": [
+				{
+					"name": "get Pedidos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Não existem Pedidos.\", function () {\r",
+									"    pm.response.to.have.body(\"[]\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Pedido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.environment.set(\"ped_id\", responseJson.id); // save the category's id for further tests\r",
+									"pm.environment.set(\"UserInterTest\",responseJson.userIntermedio);\r",
+									"\r",
+									"pm.environment.set(\"UserFinalTest\",responseJson.userObjetivo);\r",
+									"\r",
+									"console.log(pm.environment.get(\"ped_id\"));\r",
+									"console.log(pm.environment.get(\"UserInterTest\"));\r",
+									"console.log(pm.environment.get(\"UserFinalTest\"));\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricaoUserInter\":\"DescricaoUserInterTeste\",\r\n    \"descricaoUserFinal\": \"DescricaoUserFinalTeste\",\r\n    \"estadoPedido\": \"EstadoPedidoTeste\",\r\n    \"descricaoIntroducao\": \"DescricaoIntroducaoTeste\",\r\n    \"userAutenticado\":\"UserAutenticadoTeste\",\r\n    \"userIntermedio\":\"UserIntermedioTeste\",\r\n    \"userObjetivo\":\"UserObjetivoTeste\",\r\n    \"aceiteUserIntermedio\":false,\r\n    \"aceiteUserObjetivo\":false,\r\n    \"userID1\":\"UserID1Teste\",\r\n    \"userID2\":\"UserID2Teste\",\r\n    \"relationType\":\"RelationTypeTeste\",\r\n    \"strength\":1,\r\n    \"tituloPedido\":\"TituloPedidoTeste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Pedido 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.environment.set(\"ped_id2\", responseJson.id); // save the category's id for further tests\r",
+									"pm.environment.set(\"UserInterTest2\",responseJson.userIntermedio);\r",
+									"\r",
+									"pm.environment.set(\"UserFinalTest2\",responseJson.userObjetivo);\r",
+									"\r",
+									"console.log(pm.environment.get(\"ped_id2\"));\r",
+									"console.log(pm.environment.get(\"UserInterTest2\"));\r",
+									"console.log(pm.environment.get(\"UserFinalTest2\"));\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricaoUserInter\":\"DescricaoUserInterTeste2\",\r\n    \"descricaoUserFinal\": \"DescricaoUserFinalTeste2\",\r\n    \"estadoPedido\": \"EstadoPedidoTeste2\",\r\n    \"descricaoIntroducao\": \"DescricaoIntroducaoTeste2\",\r\n    \"userAutenticado\":\"UserAutenticadoTeste2\",\r\n    \"userIntermedio\":\"UserIntermedioTeste2\",\r\n    \"userObjetivo\":\"UserObjetivoTeste2\",\r\n    \"aceiteUserIntermedio\":false,\r\n    \"aceiteUserObjetivo\":false,\r\n    \"userID1\":\"UserID1Teste2\",\r\n    \"userID2\":\"UserID2Teste2\",\r\n    \"relationType\":\"RelationTypeTeste2\",\r\n    \"strength\":1,\r\n    \"tituloPedido\":\"TituloPedidoTeste2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Pedidos By User Intermedio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/{{UserInterTest}}/userInter",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								"{{UserInterTest}}",
+								"userInter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aprovar Pedido de Introdução",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body returns the correct id\", function () {\r",
+									"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"ped_id\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Body returns aceitePedidoIntermedio as true\", function () {\r",
+									"    pm.expect(responseJson.aceiteUserIntermedio).to.eql(true);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"id\":\"{{ped_id}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/{{ped_id}}/userInter",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								"{{ped_id}}",
+								"userInter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aceitar Introdução",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body returns the correct id\", function () {\r",
+									"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"ped_id\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Body returns aceiteUserObjetivo as true\", function () {\r",
+									"   pm.expect(responseJson.aceiteUserObjetivo).to.eql(true);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"id\":\"{{ped_id}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/{{ped_id}}/userObjetivo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								"{{ped_id}}",
+								"userObjetivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Pedido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Id is correct\", function(){\r",
+									"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"ped_id\"));\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/{{ped_id}}/hard",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								"{{ped_id}}",
+								"hard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get deleted pedido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Pedido creation returns status 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/EstadosHumor/{{ped_id}}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{ped_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fail is Expected",
+			"item": [
+				{
+					"name": "get Pedido by ID failed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Pedido creation returns status 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/{{ped_id}}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								"{{ped_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put Pedido bad id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"{{$guid}}\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/{{ped_id}}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								"{{ped_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "try to delete previous Pedido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Pedido/{{$guid}}/hard",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pedido",
+								"{{$guid}}",
+								"hard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

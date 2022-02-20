@@ -1,0 +1,16 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "SPA UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+activate ui
+activate mdr
+ui->mdr: .get(/api/caminhos)
+mdr->mdr: encontra o caminho \nmais seguro e adiciona\n ao "response body"
+mdr-->ui: status da resposta
+deactivate ui
+deactivate mdr
+@enduml

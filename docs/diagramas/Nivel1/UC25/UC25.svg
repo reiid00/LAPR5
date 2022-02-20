@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="299px" preserveAspectRatio="none" style="width:756px;height:299px;background:#FFFFFF;" version="1.1" viewBox="0 0 756 299" width="756px" zoomAndPan="magnify"><defs><filter height="300%" id="f1w07hwvkf6dti" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1w07hwvkf6dti)" height="96.0547" style="stroke:#A80036;stroke-width:1.0;" width="10" x="154" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1w07hwvkf6dti)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="488" y="121.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="159" x2="159" y1="89.6094" y2="213.6641"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="493" x2="493" y1="89.6094" y2="213.6641"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="5" y="86.5332">Utilizador autenticado/Utilizador não autenticado</text><ellipse cx="159" cy="15" fill="#FEFECE" filter="url(#f1w07hwvkf6dti)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M159,23 L159,50 M146,31 L172,31 M159,50 L146,65 M159,50 L172,65 " fill="none" filter="url(#f1w07hwvkf6dti)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="5" y="227.1973">Utilizador autenticado/Utilizador não autenticado</text><ellipse cx="159" cy="240.2734" fill="#FEFECE" filter="url(#f1w07hwvkf6dti)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M159,248.2734 L159,275.2734 M146,256.2734 L172,256.2734 M159,275.2734 L146,290.2734 M159,275.2734 L172,290.2734 " fill="none" filter="url(#f1w07hwvkf6dti)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1w07hwvkf6dti)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="30" x="476" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="483" y="74.5332">:UI</text><rect fill="#FEFECE" filter="url(#f1w07hwvkf6dti)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="30" x="476" y="212.6641"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="483" y="234.1973">:UI</text><rect fill="#FFFFFF" filter="url(#f1w07hwvkf6dti)" height="96.0547" style="stroke:#A80036;stroke-width:1.0;" width="10" x="154" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1w07hwvkf6dti)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="488" y="121.9609"/><polygon fill="#A80036" points="476,117.9609,486,121.9609,476,125.9609,480,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="164" x2="482" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="171" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="294" x="182" y="117.1045">Consultar Tag cloud das tags de todas as relações</text><line style="stroke:#A80036;stroke-width:1.0;" x1="498" x2="540" y1="152.3125" y2="152.3125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="540" x2="540" y1="152.3125" y2="165.3125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="499" x2="540" y1="165.3125" y2="165.3125"/><polygon fill="#A80036" points="509,161.3125,499,165.3125,509,169.3125,505,165.3125" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="505" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="233" x="516" y="147.4561">Sucesso na execução da funcionalidade</text><polygon fill="#A80036" points="170,191.6641,160,195.6641,170,199.6641,166,195.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="164" x2="492" y1="195.6641" y2="195.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="176" y="190.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="245" x="187" y="190.8076">Mostra a Tag Cloud resultante da consulta</text><!--MD5=[3f42cebd21beaeb4c00ccac0f3981969]
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador autenticado/Utilizador não autenticado" as u
+
+activate u
+u->":UI": Consultar Tag cloud das tags de todas as relações
+activate ":UI"
+":UI"->":UI": Sucesso na execução da funcionalidade
+":UI"- ->u: Mostra a Tag Cloud resultante da consulta
+deactivate ":UI"
+deactivate u
+@enduml
+
+@startuml
+autonumber
+
+actor "Utilizador autenticado/Utilizador não autenticado" as u
+
+activate u
+u->":UI": Consultar Tag cloud das tags de todas as relações
+activate ":UI"
+":UI"->":UI": Sucesso na execução da funcionalidade
+":UI"- ->u: Mostra a Tag Cloud resultante da consulta
+deactivate ":UI"
+deactivate u
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 16:16:42 GMT 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

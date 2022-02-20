@@ -1,0 +1,58 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "Controller" as ctrl
+participant "CreatingDto" as cdto
+participant "Mapper" as mpp
+participant "DTO" as dto
+participant "Service" as srv
+participant "Domain" as dmn
+participant "EntityID" as ent
+participant "Repository" as rep
+participant "ARS" as ars
+
+
+activate ui
+ui->mdr: .post(/api/users/requests)
+activate mdr
+mdr->ctrl: .post
+activate ctrl
+ctrl->cdto: recebe informação do requestBody
+activate cdto
+cdto->mpp: toDTO(ReceiveIntroToUserrDto)
+mpp->dto: new Dto(informação de objecto)
+activate mpp
+activate dto
+dto-->mpp: retorna DTO
+deactivate dto
+mpp-->cdto:
+cdto-->ctrl:
+deactivate cdto
+ctrl->srv: chamada do serviço de introdução
+activate srv
+srv->mpp: toDomain()
+mpp->dmn: edita objecto de dominio
+activate dmn
+dmn->ent: add GuID
+
+activate ent
+ent-->dmn:
+deactivate ent
+dmn-->srv: retorna introdução ao utilizador
+deactivate dmn
+srv->rep: salva introdução
+activate rep
+rep-->mpp: uso do mapper para retorno de DTO
+deactivate rep
+deactivate mpp
+srv-->ctrl: retorna a introdução criada
+deactivate srv
+ctrl-->mdr: status 201
+deactivate ctrl
+mdr-->ui: mensagem de sucesso
+deactivate ui
+deactivate mdr
+@enduml

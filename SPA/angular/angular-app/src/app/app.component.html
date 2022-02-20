@@ -1,0 +1,78 @@
+
+<router-outlet></router-outlet>  
+
+<div id="app">
+  
+    <nav class="navbar navbar-expand ">
+      <div class="spacer"></div>
+      <mat-toolbar color="primary" href="#" class="navbar-brand">MyApp
+      <ul class="navbar-nav ml-auto" routerLinkActive="active">
+        <li class="nav-item">
+          <a mat-button href="/home" class="nav-link" routerLink="home">Home </a>
+        </li>
+        <li class="nav-item">
+          <a mat-button href="/profile" class="nav-link" routerLink="profile"> {{nome}}</a>
+        </li>
+      </ul>
+  
+      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a mat-raised-button color="accent" href="/register" class="nav-link" routerLink="register">  Sign Up  </a>
+        </li>
+        
+        <li class="nav-item">
+          <a mat-raised-button color="accent" href="/login" class="nav-link" routerLink="login">   Login   </a>
+        </li>
+      </ul>
+  
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          
+        </li>
+        <!--<li class="nav-item">
+          <a mat-button href="/estadohumor" class="nav-link" routerLink="estadohumor"> Estado de Humor</a>
+        </li>-->
+        <li class="nav-item">
+          <a mat-button href="/search-box" class="nav-link" routerLink="search-box"> Pesquisar Utilizador</a>
+        </li>
+        <li class="nav-item">
+          <a mat-button href="/pedidos" class="nav-link" routerLink="pedido"> Pedidos </a>
+        </li>
+        <li class="nav-item">
+          <a mat-button href="/graph" class="nav-link" routerLink="graph"> Grafo </a>
+        </li>
+        <li class="nav-item">
+          <a mat-button href="/tag-cloud-all-tag-cloud" class="nav-link" routerLink="tag-cloud"> Tags </a>
+        </li>
+        <li class="nav-item">
+          <a mat-button href="/rgpd-terms" class="nav-link" routerLink="rgpd-terms">   RGPD Terms </a>
+        </li>
+        <li class="nav-item">
+          <a mat-button href="/post-feed" class="nav-link" routerLink="post-feed"> Posts Feed  </a>
+        </li> 
+        <li class="nav-item">
+          <a mat-button href="/user-new-conexions" class="nav-link" routerLink="new-conexions"> New Conexions  </a>
+        </li> 
+
+      </ul>
+
+
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a mat-raised-button color="accent" href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+      </ul>
+    </mat-toolbar>
+
+
+
+    </nav>
+  
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="footer" #footer>
+      <p> Número de utilizadores da rede: <strong>{{ numUtilizadores }}</strong> </p>
+      </div>
+  </div>

@@ -1,0 +1,22 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador Autenticado" as ua
+
+activate ua
+ua->"System": Seleciona opção de editar estado de humor
+activate "System"
+"System"-->ua: Apresenta estados de humor disponiveis
+deactivate "System"
+ua->"System": Seleciona o pretendido
+activate "System"
+"System"-->ua: Valida dados e pede confirmação
+deactivate "System"
+ua->"System": Confirma
+activate "System"
+"System"-->ua: Atualiza o estado de humor e informa o sucesso da operação
+
+deactivate "System"
+deactivate ua
+@enduml

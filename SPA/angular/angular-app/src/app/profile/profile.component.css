@@ -1,0 +1,12 @@
+.jumbotron {
+    background-image:url('../../assets/img/placeholder.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    border-bottom:1px solid #ff6a00;
+    width: 100%; 
+    height: 200px; 
+  }
+  .container .jumbotron {
+    padding-bottom: 1000px;
+    }
+   

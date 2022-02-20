@@ -1,0 +1,44 @@
+
+<h2 class="center"> Criar Pedido</h2>
+  <ul>
+      <p><label for="new-descricaoUserInter">Descricao para Amigo: </label></p>
+      <input data-testid="new-descricaoUserInter" #descricaoUserInter />
+      <p><label for="new-descricaoUserFinal">Descricao para pessoa que pretende ser introduzida: </label></p>
+      <input data-testid="new-descricaoUserFinal" #descricaoUserFinal />
+      <p><label for="new-userIntermedio">Escolha o seu amigo: </label></p>
+      <table class = "table table-striped">
+        <thead>
+          <tr>
+            <th>Amigo</th>
+            <th>Selecionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let friendR of friendRelationSelectedList ; index as i">
+              <td (onCreate)="getFriend(friendR)"> {{friendRelSelectedNome[i]}}</td>                        
+            <td>
+              <button type="button" data-testid="buttonEscolherUserInter" class="btn btn-light mr-1"(click) = "selectedFriendRel(friendR)" #userIntermedio> Selecionar {{i+1}}</button>
+            </td>
+        </tbody>
+      </table>
+      <p><label for="new-userObjetivo">Escolha quem pretende adicionar: </label></p>     
+      <table class = "table table-striped">
+        <thead>
+          <tr>
+            <th>Quem Pretende Adicionar</th>
+            <th>Selecionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let friend of friendSelectedList ; index as i">
+              <td (onCreate)="getFriendAfterRel(friend)"> {{friendSelectedNome[i]}}</td>                        
+            <td>
+              <button type="button" data-testid="buttonEscolherUserFinal" class="btn btn-light mr-1"(click) = "selectedFriend(friend)" #userObjetivo> Selecionar{{i+1}}</button>
+            </td>
+        </tbody>
+      </table>
+     <p> <button class= "add-button" data-testid="buttonCriarPedidoF" (click)="criarPedido(descricaoUserInter.value,descricaoUserFinal.value)"> Criar Pedido</button></p>
+   </ul>
+
+
+

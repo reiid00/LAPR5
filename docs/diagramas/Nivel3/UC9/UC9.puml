@@ -1,0 +1,33 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "Controller" as ctrl
+    participant "Relacao" as rel
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:seleciona utilizadores
+    activate mdr
+
+    mdr->ctrl: utilizadores selecionados
+    activate ctrl
+    loop for each user
+    ctrl->rel:addRelation()
+    activate rel
+    rel->repo:saves changes
+    activate repo
+    repo->rel: return
+    deactivate repo
+    rel->ctrl: return
+    deactivate rel
+    ctrl->mdr: status 201
+    end
+    deactivate ctrl
+    mdr->ui: display success message
+
+    deactivate mdr
+    deactivate ui
+    @enduml

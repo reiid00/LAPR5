@@ -1,0 +1,32 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "Utilizadores" as users
+    participant "Controller" as ctrl
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:get(/api/utilizador)
+    activate mdr
+
+    mdr->tag: get
+    activate users
+    users->ctrl:getAllUtilizadores()
+    activate ctrl
+    ctrl->ctrl: recebe o request body
+		ctrl->repo: findAll
+    activate repo
+    repo->repo: consulta a DB
+    repo-->ctrl: anexa os Utilizadores ao response body
+    deactivate repo
+    ctrl-->users: return
+    deactivate ctrl
+    users-->mdr: status 200
+    deactivate users
+    mdr-->ui: mostra os utilizadores com tags comuns
+    deactivate mdr
+    deactivate ui
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+
+    activate ui
+		ui->mdr:seleciona utilizadores
+    activate mdr
+    mdr->mdr: adiciona utilizadores selecionados
+    mdr->ui: display success message
+
+    deactivate mdr
+    deactivate ui
+    @enduml

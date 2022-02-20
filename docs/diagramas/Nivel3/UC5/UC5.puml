@@ -1,0 +1,79 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "Controller" as ctrl
+participant "CreatingDto" as cdto
+participant "Service" as srv
+participant "Repository" as rep
+participant "Mapper" as mpp
+participant "DTO" as dto
+participant "Domain" as dom
+participant "ARS" as ars
+
+
+activate ui
+ui->mdr: .get(/api/perfil)
+activate mdr
+mdr->ctrl: .get
+activate ctrl
+ctrl->srv: chamada do serviço perfil
+activate srv
+srv->rep: getById
+activate rep
+rep->rep: findByID
+rep-->srv: return perfil
+deactivate rep
+srv->mpp: chamada ao mapper para converter em DTO (toDTO)
+activate mpp
+mpp->dto: converte objeto perfil em DTO
+activate dto
+dto-->mpp: devolve objeto perfil em DTO
+deactivate dto
+mpp-->srv: devolve objeto perfilem DTO
+deactivate mpp
+srv-->ctrl: devolve objeto perfil em DTO
+deactivate srv
+ctrl-->mdr: status 201
+deactivate ctrl
+mdr-->ui: recebe perfil e apresenta ao user
+deactivate mdr
+ui->mdr:faz as mudanças permitidas
+activate mdr
+mdr->ctrl: .post
+activate ctrl
+
+
+ctrl->cdto: recebe informação do requestBody
+activate cdto
+cdto->mpp: toDTO(CreatingPerfilDto)
+activate mpp
+mpp->dto: new Dto(informação de objecto)
+activate dto
+dto-->mpp: retorna DTO
+deactivate dto
+deactivate cdto
+ctrl->srv: chamada do serviço de Perfil
+activate srv
+srv->rep: salva Perfil
+activate rep
+rep-->mpp: uso do mapper para retorno de DTO
+deactivate rep
+deactivate mpp
+srv-->ctrl: retorna o perfil criado
+deactivate srv
+ctrl-->mdr: status 201
+deactivate ctrl
+mdr-->ui: mensagem de sucesso
+deactivate ui
+deactivate mdr
+@enduml
+
+
+
+
+
+
+@enduml

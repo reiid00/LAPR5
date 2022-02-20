@@ -1,0 +1,19 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador Autenticado" as ua
+
+activate ua
+ua->"System": Pedir Introdução a utilizador objetivo
+activate "System"
+"System"-->ua: Valida Utilizador objetivo e pede confirmação
+deactivate "System"
+ua->"System": Confirma
+activate "System"
+"System"-->ua: Regista a introdução e informa de operação bem sucedida
+
+
+deactivate "System"
+deactivate ua
+@enduml

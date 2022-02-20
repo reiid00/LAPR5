@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="287px" preserveAspectRatio="none" style="width:620px;height:287px;background:#FFFFFF;" version="1.1" viewBox="0 0 620 287" width="620px" zoomAndPan="magnify"><defs><filter height="300%" id="f1rsjewwg3aoei" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1rsjewwg3aoei)" height="173.1094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="15" y="51.6094"/><rect fill="#FFFFFF" filter="url(#f1rsjewwg3aoei)" height="173.1094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="251" y="51.6094"/><rect fill="#FFFFFF" filter="url(#f1rsjewwg3aoei)" height="173.1094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="439" y="51.6094"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="20" x2="20" y1="41.6094" y2="242.7188"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="255.5" x2="255.5" y1="41.6094" y2="242.7188"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="444" x2="444" y1="41.6094" y2="242.7188"/><rect fill="#FEFECE" filter="url(#f1rsjewwg3aoei)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="26" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="12" y="26.5332">UI</text><rect fill="#FEFECE" filter="url(#f1rsjewwg3aoei)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="26" x="5" y="241.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="12" y="263.252">UI</text><rect fill="#FEFECE" filter="url(#f1rsjewwg3aoei)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="45" x="231.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="238.5" y="26.5332">MDR</text><rect fill="#FEFECE" filter="url(#f1rsjewwg3aoei)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="45" x="231.5" y="241.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="238.5" y="263.252">MDR</text><rect fill="#FEFECE" filter="url(#f1rsjewwg3aoei)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="42" x="421" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="428" y="26.5332">ARS</text><rect fill="#FEFECE" filter="url(#f1rsjewwg3aoei)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="42" x="421" y="241.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="428" y="263.252">ARS</text><rect fill="#FFFFFF" filter="url(#f1rsjewwg3aoei)" height="173.1094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="15" y="51.6094"/><rect fill="#FFFFFF" filter="url(#f1rsjewwg3aoei)" height="173.1094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="251" y="51.6094"/><rect fill="#FFFFFF" filter="url(#f1rsjewwg3aoei)" height="173.1094" style="stroke:#A80036;stroke-width:1.0;" width="10" x="439" y="51.6094"/><polygon fill="#A80036" points="239,69.9609,249,73.9609,239,77.9609,243,73.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="25" x2="245" y1="73.9609" y2="73.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="32" y="69.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="43" y="69.1045">.get(/api/user/netByPerspective)</text><polygon fill="#A80036" points="427,116.6641,437,120.6641,427,124.6641,431,120.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="261" x2="433" y1="120.6641" y2="120.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="268" y="107.6318">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="279" y="99.4561">lida com o request body,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="283" y="115.8076">envia dados</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="449" x2="491" y1="151.0156" y2="151.0156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="491" x2="491" y1="151.0156" y2="164.0156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="450" x2="491" y1="164.0156" y2="164.0156"/><polygon fill="#A80036" points="460,160.0156,450,164.0156,460,168.0156,456,164.0156" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="456" y="146.1592">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="467" y="146.1592">recebe dados e processa</text><polygon fill="#A80036" points="272,190.3672,262,194.3672,272,198.3672,268,194.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="266" x2="438" y1="194.3672" y2="194.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="278" y="189.5107">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="289" y="189.5107">envia dados</text><polygon fill="#A80036" points="31,220.7188,21,224.7188,31,228.7188,27,224.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="25" x2="255" y1="224.7188" y2="224.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="37" y="219.8623">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="191" x="48" y="219.8623">envia dados e status da resposta</text><!--MD5=[239219bb2e2c8bae6fa6323d74961d4a]
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+activate ars
+ui->mdr: .get(/api/user/netByPerspective)
+mdr->ars: lida com o request body,\n envia dados
+ars- ->ars: recebe dados e processa
+ars->mdr: envia dados
+mdr- ->ui: envia dados e status da resposta
+deactivate ars
+deactivate ui
+deactivate mdr
+@enduml
+
+@startuml
+autonumber
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+activate ars
+ui->mdr: .get(/api/user/netByPerspective)
+mdr->ars: lida com o request body,\n envia dados
+ars- ->ars: recebe dados e processa
+ars->mdr: envia dados
+mdr- ->ui: envia dados e status da resposta
+deactivate ars
+deactivate ui
+deactivate mdr
+@enduml
+
+PlantUML version 1.2021.14(Fri Nov 12 16:46:50 WET 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

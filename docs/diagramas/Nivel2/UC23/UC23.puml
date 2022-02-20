@@ -1,0 +1,17 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "SPA UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+participant "MDP" as mdp
+
+activate ui
+activate mdr
+ui->mdr: .get(/api/utilizadores)
+mdr->mdr: encontra todos \nos utilizadores\n da rede e adiciona ao "response body"
+mdr-->ui: sstatus da resposta
+deactivate ui
+deactivate mdr
+@enduml

@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "51772763-a24d-4f9e-9ef3-6c2fa7167128",
+		"name": "EstadoHumorTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Perfect Scenario Test",
+			"item": [
+				{
+					"name": "get EstadoHumor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Não existem Estados de Humor.\", function () {\r",
+									"    pm.response.to.have.body(\"[]\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/EstadosHumor/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EstadosHumor",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create EstadoHumor",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"const nome = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+									"\r",
+									"console.log(\"Randomly-generated nome: \" + nome);\r",
+									"\r",
+									"pm.environment.set(\"nome\", nome);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body returns the correct name\", function () {\r",
+									"    pm.expect(responseJson.nome).to.eql(pm.environment.get(\"nome\"));\r",
+									"});\r",
+									"\r",
+									"pm.environment.set(\"eh_id\", responseJson.id); // save the category's id for further tests\r",
+									"\r",
+									"console.log(pm.environment.get(\"eh_id\"));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"{{nome}}\",\r\n    \"icon\": \"Icon\",\r\n    \"descricaoEstadoHumor\": \"Contente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/EstadosHumor",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"EstadosHumor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get EstadoHumor created",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"console.log(pm.environment.get(\"id\"));\r",
+									"\r",
+									"pm.test(\"Estado Humor creation returns status 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Returned EstadoHumor has correct id\", function () {\r",
+									"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"id\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Returned Estado Humor has correct nome\", function () {\r",
+									"    pm.expect(responseJson.nome).to.eql(pm.environment.get(\"nome\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{eh_id}}",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{eh_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put EstadoHumor created",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const nome = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+									"const descricao = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+									"const icon = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+									"\r",
+									"console.log(\"Randomly-generated nome: \" + nome);\r",
+									"console.log(\"Randomly-generated descricao: \" + descricao);\r",
+									"pm.environment.set(\"nome\", nome);\r",
+									"pm.environment.set(\"descricao\", descricao);\r",
+									"pm.environment.set(\"icon\", icon);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body returns the correct id\", function () {\r",
+									"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"eh_id\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Body returns the same nome\", function () {\r",
+									"    pm.expect(responseJson.nome).to.eql(pm.environment.get(\"nome\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Body returns the same descricao\", function () {\r",
+									"    pm.expect(responseJson.descricaoEstadoHumor).to.eql(pm.environment.get(\"descricao\"));\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"{{eh_id}}\",\r\n    \"nome\":\"{{nome}}\",\r\n    \"descricaoEstadoHumor\": \"{{descricao}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{eh_id}}",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{eh_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE EstadoHumor deleted",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Id is correct\", function(){\r",
+									"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"eh_id\"));\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{eh_id}}/hard",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{eh_id}}",
+								"hard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET deleted previous EstadoHumor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Estado Humor creation returns status 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{eh_id}}",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{eh_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fail is Expected",
+			"item": [
+				{
+					"name": "get EstadoHumor by ID failed",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const id = pm.variables.replaceIn(\"{{$guid}}\");\r",
+									"\r",
+									"pm.environment.set(\"eh_id\", id);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Estado Humor creation returns status 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{eh_id}}",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{eh_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create EstadoHumor to Test Put",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"const nome = pm.variables.replaceIn(\"{{$randomInt}}\");\r",
+									"\r",
+									"console.log(\"Randomly-generated nome: \" + nome);\r",
+									"\r",
+									"pm.environment.set(\"nome\", nome);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body returns the correct name\", function () {\r",
+									"    pm.expect(responseJson.nome).to.eql(pm.environment.get(\"nome\"));\r",
+									"});\r",
+									"\r",
+									"pm.environment.set(\"eh_id\", responseJson.id); // save the category's id for further tests\r",
+									"\r",
+									"console.log(pm.environment.get(\"eh_id\"));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"{{nome}}\",\r\n    \"icon\": \"Icon\",\r\n    \"descricaoEstadoHumor\": \"Contente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put EstadoHumor bad id sent from previous created",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"{{$guid}}\", //this is not eh_id (what we want to update actually)\r\n    \"nome\":\"FAILED\",\r\n    \"descricaoEstadoHumor\": \"UNHAPPY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{eh_id}}",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{eh_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "try to DELETE  Previous EstadoHumor created",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{$guid}}/hard",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{$guid}}",
+								"hard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE EstadoHumor Previous Created",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Id is correct\", function(){\r",
+									"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"eh_id\"));\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://app-21s5df32.azurewebsites.net/api/EstadosHumor/{{eh_id}}/hard",
+							"protocol": "https",
+							"host": [
+								"app-21s5df32",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"EstadosHumor",
+								"{{eh_id}}",
+								"hard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

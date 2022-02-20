@@ -1,0 +1,17 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "SPA UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+participant "MDP" as mdp
+
+activate ui
+activate mdr
+ui->mdr: .get(/api/relations/idUser1/idUser2)
+mdr->mdr: encontra a relação \ne adiciona ao "response body"
+mdr-->ui: status da resposta
+deactivate ui
+deactivate mdr
+@enduml

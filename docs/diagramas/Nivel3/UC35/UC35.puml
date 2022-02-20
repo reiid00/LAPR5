@@ -1,0 +1,43 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "Controller" as ctrl
+participant "Service" as srv
+participant "Repository" as rep
+participant "Mapper" as mpp
+participant "DTO" as dto
+participant "ARS" as ars
+
+
+activate ui
+ui->mdr: .get(/api/requests)
+activate mdr
+mdr->ctrl: .get
+activate ctrl
+ctrl->srv: chamada do servico de requests
+activate srv
+srv->rep: getAllPendingRequests()
+activate rep
+rep->rep: encontra todos os pedidos pendentes
+rep-->srv: retorna lista de pedidos pendentes
+deactivate rep
+srv->mpp: toDto()
+activate mpp
+mpp->dto: converte pedidos para DTOs
+activate dto
+dto-->mpp: lista DTO de pedidos
+deactivate dto
+mpp-->srv: retorna lista de pedidos DTOs
+deactivate mpp
+srv-->ctrl: retorna lista de pedidos DTOs
+deactivate srv
+ctrl-->mdr: status 201
+deactivate ctrl
+mdr-->ui: recebe lista de todos os\n pedidos de ligação \npendentes do utilizador
+
+deactivate ui
+deactivate mdr
+@enduml

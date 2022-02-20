@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="428px" preserveAspectRatio="none" style="width:839px;height:428px;" version="1.1" viewBox="0 0 839 428" width="839px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f71bd9g" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="321.1641" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="18" y="49.6094" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="299.1641" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="220" y="71.6094" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="238.4609" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="326" y="101.9609" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="177.7578" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="477" y="132.3125" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="73.7031" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="728" y="206.0156" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="23" x2="23" y1="39.6094" y2="389.125" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="224.5" x2="224.5" y1="39.6094" y2="389.125" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="331" x2="331" y1="39.6094" y2="389.125" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="482" x2="482" y1="39.6094" y2="389.125" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="733" x2="733" y1="39.6094" y2="389.125" />
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="26" x="8" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="12" x="15" y="24.5332">UI</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="26" x="8" y="388.125" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="12" x="15" y="409.6582">UI</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="200.5" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="207.5" y="24.5332">MDR</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="200.5" y="388.125" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="207.5" y="409.6582">MDR</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="70" x="294" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="301" y="24.5332">Caminho</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="70" x="294" y="388.125" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="301" y="409.6582">Caminho</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="76" x="442" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="449" y="24.5332">Controller</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="76" x="442" y="388.125" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="449" y="409.6582">Controller</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="82" x="690" y="3" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="697" y="24.5332">Repository</text>
+        <rect fill="#FEFECE" filter="url(#f71bd9g)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="82" x="690" y="388.125" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="697" y="409.6582">Repository</text>
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="321.1641" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="18" y="49.6094" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="299.1641" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="220" y="71.6094" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="238.4609" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="326" y="101.9609" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="177.7578" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="477" y="132.3125" />
+        <rect fill="#FFFFFF" filter="url(#f71bd9g)" height="73.7031" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="728" y="206.0156" />
+        <polygon fill="#A80036" points="208,67.6094,218,71.6094,208,75.6094,212,71.6094" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="28" x2="214" y1="71.6094" y2="71.6094" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="35" y="67.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="107" x="46" y="67.1045">get(/api/caminhos)</text>
+        <polygon fill="#A80036" points="314,97.9609,324,101.9609,314,105.9609,318,101.9609" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="230" x2="320" y1="101.9609" y2="101.9609" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="237" y="97.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="18" x="248" y="97.4561">get</text>
+        <polygon fill="#A80036" points="465,128.3125,475,132.3125,465,136.3125,469,132.3125" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="336" x2="471" y1="132.3125" y2="132.3125" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="343" y="127.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="111" x="354" y="127.8076">getCaminhoMinimo</text>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="487" x2="529" y1="163.0156" y2="163.0156" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="529" x2="529" y1="163.0156" y2="176.0156" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="488" x2="529" y1="176.0156" y2="176.0156" />
+        <polygon fill="#A80036" points="498,172.0156,488,176.0156,498,180.0156,494,176.0156" style="stroke: #A80036; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="494" y="158.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="129" x="505" y="158.1592">recebe o request body</text>
+        <polygon fill="#A80036" points="716,202.0156,726,206.0156,716,210.0156,720,206.0156" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="487" x2="722" y1="206.0156" y2="206.0156" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="494" y="201.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="35" x="505" y="201.5107">findAll</text>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="738" x2="780" y1="236.7188" y2="236.7188" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="780" x2="780" y1="236.7188" y2="249.7188" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="739" x2="780" y1="249.7188" y2="249.7188" />
+        <polygon fill="#A80036" points="749,245.7188,739,249.7188,749,253.7188,745,249.7188" style="stroke: #A80036; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="745" y="231.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="82" x="756" y="231.8623">consulta a DB</text>
+        <polygon fill="#A80036" points="498,275.7188,488,279.7188,498,283.7188,494,279.7188" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="492" x2="732" y1="279.7188" y2="279.7188" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="504" y="275.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="206" x="515" y="275.2139">anexa o caminho ao response body</text>
+        <polygon fill="#A80036" points="347,306.0703,337,310.0703,347,314.0703,343,310.0703" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="341" x2="481" y1="310.0703" y2="310.0703" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="353" y="305.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="33" x="364" y="305.5654">return</text>
+        <polygon fill="#A80036" points="241,336.4219,231,340.4219,241,344.4219,237,340.4219" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="235" x2="330" y1="340.4219" y2="340.4219" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="247" y="335.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="61" x="258" y="335.917">status 200</text>
+        <polygon fill="#A80036" points="34,366.7734,24,370.7734,34,374.7734,30,370.7734" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="28" x2="224" y1="370.7734" y2="370.7734" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="14" x="40" y="366.2686">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="150" x="58" y="366.2686">mostra o caminho minimo</text></g>
+</svg>

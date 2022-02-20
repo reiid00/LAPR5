@@ -1,0 +1,176 @@
+<h1>Register</h1> 
+<div id=register> 
+    <div class="card card-container">
+      <form
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="nome">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nome"
+            [(ngModel)]="form.nome"
+            required
+            #nome="ngModel"
+          />
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="form.email"
+            required
+            email
+            #email="ngModel"
+          />
+          <div class="alert-danger" *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors['required']">Email is required</div>
+            <div *ngIf="email.errors['email']">
+              Email must be a valid email address
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="hide ? 'password' : 'text' "
+            class="form-control"
+            name="password"
+            [(ngModel)]="form.password"
+            required
+            minlength="8"
+            #password="ngModel"
+            [type]="hide ? 'password' : 'text'" placeholder=""  required>
+            <mat-icon class="placeholder" (click)="togglemyPasswordFieldType()">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <div class="alert-danger" *ngIf="password.errors && f.submitted">
+            <div *ngIf="password.errors['required']">Password is required</div>
+            <div *ngIf="password.errors['minlength']">
+              Password must be at least 8 characters
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dataNascimento">Birth Date</label>
+          <input
+            type="date"
+            class="form-control"
+            name="dataNascimento"
+            [(ngModel)]="form.dataNascimento"
+            required
+            #dataNascimento="ngModel"
+          />
+        <div class="alert-danger" *ngIf="dataNascimento.errors && f.submitted">
+            <div *ngIf="dataNascimento.errors['required']">Data de Nascimento is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="avatar">Avatar</label>
+          <input
+            type="text"
+            class="form-control"
+            name="avatar"
+            [(ngModel)]="form.avatar"
+            #avatar="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+            <label for="cidade">City</label>
+            <input
+              type="text"
+              class="form-control"
+              name="cidade"
+              [(ngModel)]="form.cidade"
+              #cidade="ngModel"
+        />
+        </div>
+
+        <div class="form-group">
+              <label for="pais">Country</label>
+              <input
+                type="text"
+                class="form-control"
+                name="pais"
+                [(ngModel)]="form.pais"
+                #pais="ngModel"
+         />
+        </div>
+
+          <div class="form-group">
+            <label for="descricao">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              name="descricao"
+              [(ngModel)]="form.descricao"
+              #descricao="ngModel"
+          />
+         </div>
+
+        <div class="form-group">
+          <label for="numTelemovel">Telephone</label>
+          <input
+            type="text"
+            class="form-control"
+            name="numTelemovel"
+            [(ngModel)]="form.numTelemovel"
+            #numTelemovel="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="estadoHumor">Mood</label>
+          <select id="estadoHumor" name="estadoHumor" class="form-control" [(ngModel)]="form.estadoHumorId" >
+            <option *ngFor="let eh of estadosHumor" [value]="eh.id">
+              {{eh.nome}}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Tags">Tags</label>
+          <input
+            type="text"
+            class="form-control"
+            name="Tags"
+            required
+            [(ngModel)]="form.Tags"
+            #Tags="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+          <div class="form-control">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="isAccept" [(ngModel)]="form.isAccept">I have read and agree to the following <a target="_blank" [routerLink]="['/rgpd-terms']" rel="nofollow noopener ugc" >RGPD Terms & Conditions</a>
+            </label>
+          </div>
+        </div>
+
+       </div>
+        <div class="form-group">
+          <button   [disabled]="!form.isAccept" class="btn btn-primary btn-block">Sign Up</button>
+        </div>
+
+        <div class="alert alert-warning" *ngIf="f.submitted && !form.isAccept">
+          Please indicate that you have read and agree to the RGPD Terms & Conditions <br />{{ errorMessage }}
+        </div>
+  
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          Signup failed!<br />{{ errorMessage }}
+        </div>
+      </form>
+  
+      <div class="alert alert-success" *ngIf="isSuccessful">
+        Your registration is successful!
+      </div>
+    </div>
+  </div>

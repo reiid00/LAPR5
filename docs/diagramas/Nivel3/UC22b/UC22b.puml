@@ -1,0 +1,34 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+    participant "Relation" as rel
+    participant "Controller" as ctrl
+    participant "Repository" as repo
+
+    activate ui
+		ui->mdr:get(/api/relations/idUser1)
+    activate mdr
+
+     loop nUsers
+        mdr->rel: get
+        activate rel
+        rel->ctrl:getRelationFriends(idUser)
+        activate ctrl
+        ctrl->ctrl: recebe o request body
+		    ctrl->repo: findAll
+        activate repo
+        repo->repo: consulta a DB
+        repo-->ctrl: anexa a(s) relação(s) ao response body
+        deactivate repo
+        ctrl-->rel: return
+        deactivate ctrl
+        rel-->mdr: status 200
+    end
+    deactivate rel
+    mdr-->ui: mostra a fortaleza de relacões resultante por utilizador forma decrescente
+    deactivate mdr
+    deactivate ui
+@enduml

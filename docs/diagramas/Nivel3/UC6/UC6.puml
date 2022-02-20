@@ -1,0 +1,75 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "Controller" as ctrl
+participant "Service" as srv
+participant "Repository" as rep
+participant "Mapper" as mpp
+participant "DTO" as dto
+participant "Domain" as dom
+participant "ARS" as ars
+
+
+activate ui
+ui->mdr: .get(/api/estado_humor)
+activate mdr
+mdr->ctrl: .get
+activate ctrl
+ctrl->srv: chamada do serviço estado_humor
+activate srv
+srv->rep: getAll
+activate rep
+rep->rep: findAll
+rep-->srv: return list de estado_humor
+deactivate rep
+srv->mpp: chamada ao mapper para converter em DTO (toDTO)
+activate mpp
+mpp->dto: converte lista em DTO
+activate dto
+dto-->mpp: devolve a lista em DTO
+deactivate dto
+mpp-->srv: devolve lista em DTO
+deactivate mpp
+srv-->ctrl: devolve lista em DTO
+deactivate srv
+ctrl-->mdr: status 200
+deactivate ctrl
+mdr-->ui: recebe lista e apresenta ao user
+deactivate mdr
+ui->mdr:escolhe um estado de humor
+activate mdr
+mdr->ctrl: .put
+activate ctrl
+ctrl->srv: chamada do serviço estado_humor
+activate srv
+srv->rep: getByID
+activate rep
+rep->rep: findByID
+rep-->srv: return estado_humor
+deactivate rep
+srv->dom: altera estado_humor
+activate dom
+dom --> srv: return objeto estado_humor atualizado
+deactivate dom
+srv ->rep: save estado_humor
+activate rep
+rep-->mpp: usa mapper para retornar DTO do estado_humor
+activate mpp
+deactivate rep
+deactivate mpp
+srv --> ctrl: retorna estado_humor atualizado
+deactivate srv
+ctrl-->mdr: status 200
+deactivate ctrl
+mdr-->ui: recebe estado_humor atualizado e apresenta ao user
+deactivate mdr
+
+
+
+
+
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador" as ua
+
+activate ua
+ua->"System": Consultar o caminho mais seguro até determinado utilizador
+activate "System"
+"System"->"System": Sucesso na execução da funcionalidade
+"System"-->ua: Mostra o caminho resultante da consulta
+deactivate "System"
+deactivate ua
+@enduml

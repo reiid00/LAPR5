@@ -1,0 +1,5 @@
+C:\Users\Conta Microsoft I\Documents\21s5_df_32\MDR\obj\Debug\net5.0\UnitTesting.csproj.AssemblyReference.cache
+C:\Users\Conta Microsoft I\Documents\21s5_df_32\MDR\obj\Debug\net5.0\UnitTesting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Conta Microsoft I\Documents\21s5_df_32\MDR\obj\Debug\net5.0\UnitTesting.AssemblyInfoInputs.cache
+C:\Users\Conta Microsoft I\Documents\21s5_df_32\MDR\obj\Debug\net5.0\UnitTesting.AssemblyInfo.cs
+C:\Users\Conta Microsoft I\Documents\21s5_df_32\MDR\obj\Debug\net5.0\UnitTesting.csproj.CoreCompileInputs.cache

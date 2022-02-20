@@ -1,0 +1,17 @@
+@startuml
+autonumber
+'hide footbox
+
+		participant "UI" as ui
+		participant "MDR" as mdr
+
+    activate ui
+		ui->mdr:put(/relacoes)
+    activate mdr
+
+    mdr->mdr: receives request body, \n validates it and updates relation
+    mdr->ui: display success message
+
+    deactivate mdr
+    deactivate ui
+    @enduml

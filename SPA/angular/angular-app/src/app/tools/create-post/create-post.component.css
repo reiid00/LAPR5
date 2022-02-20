@@ -1,0 +1,17 @@
+#post {
+    font-size: 1.0em;
+    padding: 1em;
+    resize: none;
+    width: 250px;
+    min-height: 200px;
+    outline: none;
+}
+
+#tag {
+    font-size: 1.0em;
+    padding: 1em;
+    resize: none;
+    width: 250px;
+    min-height: 100px;
+    outline: none;
+}

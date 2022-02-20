@@ -1,0 +1,113 @@
+
+
+<h1>EstadoHumor Menu</h1>
+<h3>Obter Todos Estados Humor</h3>
+<div id=getAll>
+  <button (click)="getEstadosHumor()">Obter Lista de Todos os Estados de Humor</button>
+  
+  <ul class='RequestBody'>
+    
+    <li *ngFor="let eh of estadosHumor">
+      <input value={{eh.id}} readonly>
+      <input value={{eh.nome}} readonly>
+      <input value={{eh.descricaoEstadoHumor}} readonly>
+      <input value={{eh.icon}} readonly>
+    </li>
+  </ul>
+</div>
+
+
+<div id=byId>
+  <h3>Obter por ID</h3>  
+  <input #w_id type='text' placeholder="EstadoHumor ID Here">
+    <button (click)="getById(w_id.value)">Obter Estado Humor por ID</button>
+  <div *ngIf="estadoHumorById">
+    
+    <h5>{{estadoHumorById.nome | uppercase}} Details</h5>
+    <div class=RequestBody>
+      <p>-------------------------------</p>
+      ID: {{estadoHumorById.id}}
+      <p></p>
+      Nome: {{estadoHumorById.nome}}
+      <p></p>
+      Descricao: {{estadoHumorById.descricaoEstadoHumor}}
+      <p></p>
+      Icon: {{estadoHumorById.icon}}
+      <p>-------------------------------</p>
+    </div>
+  </div>
+
+</div>
+
+
+<div id=post>  
+  <h3>Submeter Novo Estado Humor</h3> 
+  <input #nomePost type='text' maxlength="10" placeholder="Nome Here">
+  <p></p>
+  <input #descricaoPost type='text' maxlength="10" placeholder="Descricao Here">
+  <p></p>
+  <input #iconPost type='text' maxlength="10" placeholder="Icon Here">
+  <p></p>
+    <button (click)="postEstadoHumor(nomePost.value, iconPost.value, descricaoPost.value)">Enviar!</button>
+    <div *ngIf="estadoHumorPost">
+    
+      <h5>Estado Humor: {{estadoHumorPost.nome | uppercase}} Criado</h5>
+     
+
+      <div class=RequestBody>
+        <p>-------------------------------</p>
+        ID: {{estadoHumorPost.id}}
+        <p></p>
+        Nome: {{estadoHumorPost.nome}}
+        <p></p>
+        Descricao: {{estadoHumorPost.descricaoEstadoHumor}}
+        <p></p>
+        Icon: {{estadoHumorPost.icon}}
+        <p>-------------------------------</p>
+      </div>
+    </div>
+</div>
+
+
+<div id=put>  
+  <h3>Alterar Estado Humor Existente</h3>
+  <input #idPut type='text' placeholder="ID Here">
+  <p></p>
+  <input #nomePut type='text' maxlength="10" placeholder="Nome Here">
+  <p></p>
+  <input #descricaoPut type='text' maxlength="10" placeholder="Descricao Here">
+  <p></p>
+  <input #iconPut type='text' maxlength="10" placeholder="Icon Here">
+  <p></p>
+    <button (click)="putEstadoHumor(idPut.value, nomePut.value, iconPut.value, descricaoPut.value)">Enviar!</button>
+    <div *ngIf="estadoHumorPut">
+    
+      <h5>Estado Humor: {{estadoHumorPut.nome | uppercase}} Alterado</h5>
+      <div class=RequestBody>
+        <p>-------------------------------</p>
+        ID: {{estadoHumorPut.id}}
+        <p></p>
+        Nome: {{estadoHumorPut.nome}}
+        <p></p>
+        Descricao: {{estadoHumorPut.descricaoEstadoHumor}}
+        <p></p>
+        Icon: {{estadoHumorPut.icon}}
+        <p>-------------------------------</p>
+      </div>
+    </div>
+</div>
+
+
+<div id=delete>  
+  <h3>Apagar Estado Humor</h3> 
+  <input #idDel type='text' placeholder="ID Here">
+    <button (click)="deleteEstadoHumor(idDel.value)">Apagar!</button>
+    <div *ngIf="estadoHumorDelete">
+      <h5>Estado Humor: {{estadoHumorDelete.nome | uppercase}} Apagado</h5>
+      <div class=RequestBody>
+        <p>-------------------------------</p>
+        ID: {{estadoHumorDelete.id}}
+        <p>-------------------------------</p>
+      </div>
+    </div>
+</div>

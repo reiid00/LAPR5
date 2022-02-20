@@ -1,0 +1,241 @@
+<div *ngIf="currentUser; else loggedOut">
+    <header class="jumbotron">
+      <div class="container">
+      </div>
+    </header>
+
+    
+    
+<div class=alt_email>
+<!-- ALTERAR Email -->
+    <p ><strong  >Email: </strong>
+      <i data-testid="email" >{{ currentUser.email }}</i></p>
+      
+      <tr [hidden]="clickEmailEvent">
+        <button data-testid="button_email" (click)="onClickEmail()">Alterar Email</button>
+      </tr>
+      <div>
+        <tr [hidden]="!clickEmailEvent">
+          <input data-testid="new_email_box" #new_email type='text' placeholder="Your new Email here">
+            <button data-testid="button_email_change" (click)="changeEmail(new_email.value)"> Submeter</button>
+        </tr>
+      </div>
+</div>
+<!-- ALTERAR Data Nascimento -->
+    <p></p>
+    <div id=alt_dn>   
+      <p><strong>Data Nascimento:</strong>
+        <i data-testid="dataN" >{{ currentUser.dataNascimento }} </i></p> 
+      <tr [hidden]="clickDataNascEvent">
+        <button data-testid="button_data" (click)="onClickDataNascimento()">Alterar Data Nascimento</button>
+      </tr>  
+        <div>
+          <tr [hidden]="!clickDataNascEvent">
+            <input data-testid="dataN_box"
+              type="date"
+              name="currentUser.dataNascimento"
+              [(ngModel)]="currentUser.dataNascimento"
+              #dataNascimento="ngModel"
+            />
+          <button data-testid="button_dataN_change" (click)="changeDataNascimento()"> Submeter</button>
+          </tr>
+        </div>
+    </div>
+<!-- ALTERAR Descrição -->
+    <p></p> 
+
+    <div id=alt_desc>   
+      <p><strong>Descrição:</strong>
+        <i data-testid="desc" >{{ currentUser.descricao }}</i> </p>
+      <tr [hidden]="clickDescricaoEvent">
+        <button data-testid="button_desc" (click)="onClickDescricao()">Alterar Descrição</button>
+      </tr>  
+        <div>
+          <tr [hidden]="!clickDescricaoEvent">
+            <input data-testid="desc_box" #newDescricao type='text' placeholder="Your new Descrição here">
+              <button data-testid="button_change_desc" (click)="changeDescricao(newDescricao.value)"> Submeter</button>
+          </tr>
+        </div>
+    </div>
+<!-- ALTERAR País -->
+    <p></p>
+    <div id=alt_pais>    
+      <p><strong>País:</strong>
+        <i data-testid="pais" >{{ currentUser.pais }} </i></p>
+      <tr [hidden]="clickPaisEvent">  
+        <button data-testid="button_pais" (click)="onClickPais()">Alterar País</button>
+      </tr>
+      <div>
+        <tr [hidden]="!clickPaisEvent">
+          <input data-testid="pais_box" #newPais type='text' placeholder="Your new País here">
+            <button data-testid="button_change_pais" (click)="changePais(newPais.value)"> Submeter</button>
+        </tr>
+      </div>
+    </div>
+<!-- ALTERAR CIDADE -->
+    <p></p>
+    <div id=alt_cdd>   
+      <p><strong>Cidade:</strong>
+        <i data-testid="cidade" > {{ currentUser.cidade }}</i> </p>
+      <tr [hidden]="clickCidadeEvent">      
+        <button data-testid="button_cidade" (click)="onClickCidade()">Alterar Cidade</button>
+      </tr>
+       <div>
+        <tr [hidden]="!clickCidadeEvent">
+          <input data-testid="cidade_box" #newCidade type='text' placeholder="Your new Cidade here">
+            <button data-testid="button_change_cidade" (click)="changeCidade(newCidade.value)"> Submeter</button>
+        </tr>
+      </div>
+    </div>
+<!-- ALTERAR Numero Telemovel -->
+    <p></p> 
+    <div id=alt_NT>   
+      <p><strong>Número Telemóvel:</strong>
+        <i data-testid="numTel" >{{ currentUser.numTelemovel }}</i> </p>
+      <tr [hidden]="clickNumTelemEvent"> 
+        <button data-testid="button_numTel" (click)="onClickNumTelemovel()">Alterar Número Telemóvel</button>
+      </tr>  
+        <div>
+          <tr [hidden]="!clickNumTelemEvent">
+            <input data-testid="numTel_box" #newTelemovel type='text' placeholder="Your new número telemóvel here">
+              <button data-testid="button_change_numTel" (click)="changeNumTelemovel(newTelemovel.value)"> Submeter</button>
+          </tr>
+        </div>
+    </div>
+<!-- ALTERAR Estado Humor -->
+    <p></p> 
+    <div id=alt_dn>   
+        <strong data-testid="eh" *ngIf="estadoHumorById">Estado Humor: {{ estadoHumorById.nome }}</strong>
+        <p></p>
+
+      <tr [hidden]="clickEstadoHumorEvent"> 
+        <button data-testid="button_eh" (click)="onClickEstadoHumor()">Alterar EstadoHumor</button>
+      </tr>
+      <div>
+        <tr [hidden]="!clickEstadoHumorEvent">
+          
+          <mat-form-field appearance="fill">
+            
+            <mat-select data-testid="eh_box" [(ngModel)]="selectedEstadoHumor" name="eh" placeholder="Select Estado Humor">
+              <ng-container *ngFor="let eh of estadosHumor">
+                <mat-option  [value]="eh"> {{eh.nome}} </mat-option>
+              </ng-container>
+            </mat-select>
+          </mat-form-field>
+         
+         <p></p>
+         <p></p>
+          <button data-testid="button_change_eh" (click)="changeEstadoHumor()"> Submeter</button>
+        </tr>
+      </div>
+  </div>
+
+    <p></p>
+<!-- ALTERAR Password -->
+  <div id=alt_dn>   
+    <p><strong>Alterar Password</strong>
+      <p></p>
+      <tr [hidden]="clickPasswordEvent">
+        <button (click)="onClickPassword()">Alterar Password</button>
+      </tr>
+      <div>
+        <tr [hidden]="!clickPasswordEvent">
+          <input #new_pw type='password' passwordrules="required: upper; minlength: 8;" placeholder="Your new password here">
+            <button  (click)="changePassword(new_pw.value)"> Submeter</button>
+        </tr>
+      </div>  
+
+  </div>
+
+    <p></p> 
+    <p><strong>Tags: </strong></p>
+    <ul>
+      <li data-testid="tag" *ngFor="let tag of currentUser.tags">
+          {{ tag }}
+      </li> 
+    </ul>
+
+    <div id=add_tags>   
+      <p><strong>Adicionar Tag</strong>
+        <p></p>
+        <tr [hidden]="clickAddTagsEvent">
+          <button data-testid="button_add1_tag" (click)="onClickAddTags()">Adicionar Tag</button>
+        </tr>
+        <div>
+          <tr [hidden]="!clickAddTagsEvent">
+            <mat-form-field appearance="fill">
+              <mat-select data-testid="add_tag_box" [(ngModel)]="selectedTag" name="tag" placeholder="Select Tag">
+                <ng-container  *ngFor="let tag of globalTags">
+                  <mat-option  [value]="tag"> {{tag.titulo}} </mat-option>
+                </ng-container>
+              </mat-select>
+            </mat-form-field>
+            <button data-testid="button_add2_tag" (click)="addTag()"> Submeter</button>
+          </tr>
+        </div>  
+    </div>
+
+    <p></p>
+    
+    <div id=remove_tags>   
+      <p><strong>Remove Tag</strong>
+        <p></p>
+        <tr [hidden]="clickRemoveTagsEvent">
+          <button  data-testid="button_remove_tag" (click)="onClickRemoveTags()">Remove Tag</button>
+        </tr>
+        <div>
+          <tr [hidden]="!clickRemoveTagsEvent">
+            <mat-form-field appearance="fill">
+              <mat-select data-testid="remove_tag_box" [(ngModel)]="selectFromUserTag" name="tag" placeholder="Select Tag">
+                <ng-container *ngFor="let tag of userTags">
+                  <mat-option  [value]="tag"> {{tag}} </mat-option>
+                </ng-container>
+              </mat-select>
+            </mat-form-field>
+            <button data-testid="button_remove2_tag" (click)="removeTag()"> Submeter</button>
+          </tr>
+        </div>  
+    </div>
+    
+    <p></p>
+    <p><strong>Tamanhos de Rede</strong></p>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Nivel</th>
+        <th>Tamanho de Rede</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let num of numeros; index as i">
+        <td > {{num}}</td>
+        <td (onCreate)="getTamanhoRede(num)">{{tamanhoRedeList[i]}} </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <p></p>
+    <p><strong>Fortaleza de Rede</strong></p>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Nivel</th>
+        <th>Fortaleza de Rede</th>
+      </tr>
+      </thead>
+      <tbody>
+        <td > 1</td>
+        <td >{{fortalezaRede}} </td>
+      </tbody>
+    </table>
+
+
+
+  </div>
+  
+  <ng-template #loggedOut>
+    Please login.
+  </ng-template>
+
+  
+<h2>END OF PAGE</h2>

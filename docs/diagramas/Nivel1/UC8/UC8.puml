@@ -1,0 +1,22 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador Não Autenticado" as una
+
+activate una
+una->"System": Começar registo do utilizador no sistema
+activate "System"
+"System"-->una: Solicita dados do Utilizador para o registo (i.e. obrigatorios: email, password, \ndata de nascimento; opcionais: numero de telemovel, descrição do perfil, lista de tags, foto de avatar, pais, cidade e estado de humor)
+deactivate "System"
+una->"System": Insere os dados necessários
+activate "System"
+"System"-->una: Valida dados e pede confirmação
+deactivate "System"
+una->"System": Confirma
+activate "System"
+"System"-->una: Regista os dados e informa de operação bem sucedida
+
+deactivate "System"
+deactivate una
+@enduml

@@ -1,0 +1,25 @@
+<div style="height:600px;width: 600px;overflow:auto;">
+  <div id="table-scrow" class="table table-striped" align="center" style="overflow-y:auto;">
+<ng-container *ngFor="let comentario of comentarios; let i = index ">
+  <div >
+    <div class="card text-center">
+          <div class="card text-left">
+             <div class="card-header">
+                   {{utilizadores[i].nome}}       
+            </div>
+          </div>
+      
+          <div class="card text-left">
+              <div class="col-12 font-weight-normal">{{comentario?.texto}}</div>
+          </div>
+
+          <div class="row p-3">
+            <ng-container *ngFor="let tag of comentario.tags; let j = index">
+            <div class="col-3 font-weight-lower">#{{comentario?.tags[j]}}</div>
+            </ng-container>
+         </div>
+        </div>  
+      </div>
+</ng-container>
+</div>
+</div>

@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "e6b0f0c4-4c10-4453-8a0b-35c8c3f38404",
+		"name": "relations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get relations",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are no relations\", function () {\r",
+							"    pm.response.to.have.body(\"[]\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Relation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Relation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create relation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"relation_id\", responseJson.id); // save the relation's id for further tests\r",
+							"\r",
+							"console.log(pm.environment.get(\"relation_id\"));"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserID1\":\"bf021411-985b-4094-8c0f-825b5d92b053\",\r\n    \"UserID2\":\"cbde79ea-3875-4e7c-9f8f-75fce09998dd\",\r\n    \"RelationTypes\":[\"teste1\",\"teste2\"],\r\n    \"Strength\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Relation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Relation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get created relation",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"console.log(pm.environment.get(\"relation_id\"));\r",
+							"\r",
+							"pm.test(\"Relation creation returns status 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned Relation has correct relation_id\", function () {\r",
+							"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"relation_id\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Relation/{{relation_id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Relation",
+						"{{relation_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit relation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"console.log(pm.environment.get(\"relation_id\"));\r",
+							"\r",
+							"pm.test(\"Relation update returns status 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned Relation has correct relation_id\", function () {\r",
+							"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"relation_id\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"{{relation_id}}\",\r\n    \"UserID1\":\"bf021411-985b-4094-8c0f-825b5d92b053\",\r\n    \"UserID2\":\"cbde79ea-3875-4e7c-9f8f-75fce09998dd\",\r\n    \"RelationTypes\":[\"teste5,TESTE6\"],\r\n    \"Strength\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Relation/{{relation_id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Relation",
+						"{{relation_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete relation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"console.log(pm.environment.get(\"relation_id\"));\r",
+							"\r",
+							"pm.test(\"Relation deletion returns status 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned Relation has correct relation_id\", function () {\r",
+							"    pm.expect(responseJson.id).to.eql(pm.environment.get(\"relation_id\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Relation/{{relation_id}}/hard",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Relation",
+						"{{relation_id}}",
+						"hard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,23 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador Autenticado" as ua
+
+activate ua
+ua->"System": Aprovador/Desaprovar pedido de introdução
+activate "System"
+"System"-->ua: Mostra pedido de introdução
+deactivate "System"
+ua->"System": Aprova / Desaprova o pedido
+activate "System"
+"System"-->ua: Valida a aprovação/desaprovação do pedido e pede confirmação
+deactivate "System"
+ua->"System": Confirma
+activate "System"
+"System"-->ua: Regista a aprovação/desaprovação do pedido de introdução e informa de operação bem sucedida
+
+
+deactivate "System"
+deactivate ua
+@enduml

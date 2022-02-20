@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Search Users Feed</mat-card-title>
+    </mat-card-header>
+
+    <div style="height:300px;width: 500px;overflow:auto;">
+
+    <div class="container">
+    <div class="row">
+      <div class="search-box">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search for user by name">
+      </div>
+      <table id="table-scrow" class="table table-striped" align="center" style="overflow-x:auto;">
+        <thead>
+        <tr>
+          <th>User Email</th>
+          <th>User Name</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users | filter:searchText">
+          <td>{{user.email}}</td>
+          <td><a [routerLink]="['/user-profile',user.id]"> {{user.nome}}</a></td>
+          <button (click)="onSearchFeedClick(user.id)" 
+        mat-flat-button color="accent">Search</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+

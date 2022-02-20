@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="317px" preserveAspectRatio="none" style="width:499px;height:317px;" version="1.1" viewBox="0 0 499 317" width="499px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="frszyd1bgr4wo" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#FFFFFF" filter="url(#frszyd1bgr4wo)" height="113.4063" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="74" y="97.6094" />
+        <rect fill="#FFFFFF" filter="url(#frszyd1bgr4wo)" height="30.3516" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="455" y="119.9609" />
+        <rect fill="#FFFFFF" filter="url(#frszyd1bgr4wo)" height="30.3516" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="455" y="180.6641" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="79" x2="79" y1="87.6094" y2="229.0156" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="460" x2="460" y1="87.6094" y2="229.0156" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="8" y="84.5332">Utilizador Autenticado</text>
+        <ellipse cx="79" cy="13" fill="#FEFECE" filter="url(#frszyd1bgr4wo)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;" />
+        <path d="M79,21 L79,48 M66,29 L92,29 M79,48 L66,63 M79,48 L92,63 " fill="none" filter="url(#frszyd1bgr4wo)" style="stroke: #A80036; stroke-width: 2.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="8" y="242.5488">Utilizador Autenticado</text>
+        <ellipse cx="79" cy="255.625" fill="#FEFECE" filter="url(#frszyd1bgr4wo)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;" />
+        <path d="M79,263.625 L79,290.625 M66,271.625 L92,271.625 M79,290.625 L66,305.625 M79,290.625 L92,305.625 " fill="none" filter="url(#frszyd1bgr4wo)" style="stroke: #A80036; stroke-width: 2.0;" />
+        <rect fill="#FEFECE" filter="url(#frszyd1bgr4wo)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="60" x="428" y="51" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="435" y="72.5332">System</text>
+        <rect fill="#FEFECE" filter="url(#frszyd1bgr4wo)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="60" x="428" y="228.0156" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="435" y="249.5488">System</text>
+        <rect fill="#FFFFFF" filter="url(#frszyd1bgr4wo)" height="113.4063" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="74" y="97.6094" />
+        <rect fill="#FFFFFF" filter="url(#frszyd1bgr4wo)" height="30.3516" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="455" y="119.9609" />
+        <rect fill="#FFFFFF" filter="url(#frszyd1bgr4wo)" height="30.3516" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="455" y="180.6641" />
+        <polygon fill="#A80036" points="443,115.9609,453,119.9609,443,123.9609,447,119.9609" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="84" x2="449" y1="119.9609" y2="119.9609" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="91" y="115.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="208" x="102" y="115.1045">Pedir Introdução a utilizador objetivo</text>
+        <polygon fill="#A80036" points="95,146.3125,85,150.3125,95,154.3125,91,150.3125" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="89" x2="459" y1="150.3125" y2="150.3125" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="101" y="145.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="258" x="112" y="145.4561">Valida Utilizador objetivo e pede confirmação</text>
+        <polygon fill="#A80036" points="443,176.6641,453,180.6641,443,184.6641,447,180.6641" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="84" x2="449" y1="180.6641" y2="180.6641" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="91" y="175.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="51" x="102" y="175.8076">Confirma</text>
+        <polygon fill="#A80036" points="90,207.0156,80,211.0156,90,215.0156,86,211.0156" style="stroke: #A80036; stroke-width: 1.0;" />
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="84" x2="459" y1="211.0156" y2="211.0156" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="7" x="96" y="206.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="336" x="107" y="206.1592">Regista a introdução e informa de operação bem sucedida</text>
+        <!--
+@startuml
+autonumber
+
+actor "Utilizador Autenticado" as ua
+
+activate ua
+ua->"System": Pedir Introdução a utilizador objetivo
+activate "System"
+"System"- ->ua: Valida Utilizador objetivo e pede confirmação
+deactivate "System"
+ua->"System": Confirma
+activate "System"
+"System"- ->ua: Regista a introdução e informa de operação bem sucedida
+
+
+deactivate "System"
+deactivate ua
+@enduml
+
+PlantUML version 1.2018.14(Fri Dec 21 16:33:16 WET 2018)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 15.0.2+7-27
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+-->
+    </g>
+</svg>

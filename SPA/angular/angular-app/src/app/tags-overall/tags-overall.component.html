@@ -1,0 +1,30 @@
+<div class="container">
+    <h3 class="center"><img src="../../assets/img/consultas.png" width="100" height="100"> Consulta Tags</h3>
+  
+  </div>
+    
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+      <ul class="navbar-nav" routerLinkActive="active">
+        <li class="nav-item">
+            <button mat-button data-testid="tagCloud" href="/tag-cloud-all-users" class="nav-link" routerLink="./tag-cloud-all-users"> Tag Cloud de Todos os Utilizadores</button>
+        </li> 
+        <li class="nav-item">
+            <button mat-button data-testid="tag-all-relacoes" href="/tag-all-relacoes" class="nav-link" routerLink="./tag-all-relacoes"> Tag Cloud todas as relações</button>
+        </li>
+        <div *ngIf=isLoggedIn>
+            <li class="nav-item">
+                <button mat-button data-testid="tag-cloud-relacoes-proprio" href="/tag-relacoes-proprio" class="nav-link" routerLink="./tag-relacoes-proprio"> Tag Cloud Relações Próprio Utilizador</button>
+            </li>
+            <li class="nav-item">
+                <button mat-button data-testid="tag-cloud-proprio" href="/tag-proprio" class="nav-link" routerLink="./tag-proprio"> Tag Cloud Próprio Utilizador</button>
+            </li>
+        </div>
+       
+      
+    </ul> 
+    
+    </nav>
+  
+  
+  
+  <router-outlet></router-outlet>  

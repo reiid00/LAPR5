@@ -1,0 +1,62 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "User" as usr
+participant "UI" as ui
+participant "HTML" as html
+participant "Component" as cmp
+participant "Service" as srv
+participant "MDR" as mdr
+
+
+activate usr
+usr->ui: getAll
+activate ui
+ui->html: getAll
+activate html
+html->cmp: chamada da component estado-humor
+activate cmp
+cmp->srv: getAll
+activate srv
+srv->mdr: getAll
+activate mdr
+mdr->mdr: .get(api/EstadosHumor
+mdr-->srv: return list de estado_humor e status 200
+deactivate mdr
+srv-->cmp: devolve lista
+cmp -->html: devolve lista
+deactivate cmp
+deactivate srv
+html-->ui:recebe lista
+deactivate html
+ui-->usr: recebe lista e apresenta ao user
+deactivate ui
+usr->ui:escolhe estado de humor
+activate ui
+ui->html: putEstadoHumor
+activate html
+html->cmp: chamada da component estado-humor
+activate cmp
+cmp->srv: putEstadoHumor
+activate srv
+srv->mdr: put
+activate mdr
+mdr-->srv: retorna estado_humor e status 200
+deactivate mdr
+srv --> cmp: retorna estado_humor
+deactivate srv
+cmp-->html: retorna estado_humor
+deactivate cmp
+html-->ui: retorna estado_humor
+deactivate cmp
+deactivate html
+ui-->usr: recebe estado humor atualizado e apresenta ao user
+deactivate ui
+
+
+
+
+
+
+@enduml

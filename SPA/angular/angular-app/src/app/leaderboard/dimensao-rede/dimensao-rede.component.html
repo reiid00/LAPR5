@@ -1,0 +1,15 @@
+<table class = "table table-striped">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Utilizador</th>
+        <th> Dimensão da rede </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allUsers ; index as i">
+        <td>{{i+1}}</td>
+        <td > {{allUsersDef[i].nome}}</td>                        
+        <td > {{usersNetworkDimensionDef[i]}}</td>        
+    </tbody>
+  </table>

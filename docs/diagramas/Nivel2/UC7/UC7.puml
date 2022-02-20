@@ -1,0 +1,21 @@
+@startuml
+autonumber
+'hide footbox
+
+participant "UI" as ui
+participant "MDR" as mdr
+participant "ARS" as ars
+
+
+activate ui
+activate mdr
+activate ars
+ui->mdr: .get(/api/user/netByPerspective)
+mdr->ars: lida com o request body,\n envia dados
+ars-->ars: recebe dados e processa
+ars->mdr: envia dados
+mdr-->ui: envia dados e status da resposta
+deactivate ars
+deactivate ui
+deactivate mdr
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Administrador" as una
+
+activate una
+una->"System": Editar relacionamento com tags e força de relaçao
+activate "System"
+"System"->una: Mensagem de sucesso
+deactivate "System"
+deactivate una
+@enduml

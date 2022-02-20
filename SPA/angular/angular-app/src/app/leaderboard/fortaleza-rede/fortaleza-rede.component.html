@@ -1,0 +1,15 @@
+<table class = "table table-striped">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Utilizador</th>
+        <th> Total de Força</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userIDList ; index as i">
+        <td>{{i+1}}</td>
+        <td > {{userSelectedList[i]}}</td>                        
+        <td > {{strengthList[i]}}</td>        
+    </tbody>
+  </table>

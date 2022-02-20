@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Create Post</mat-card-title>
+    </mat-card-header>
+<form  #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">          
+             <textarea id="post" #postInput   placeholder="Type some text for the Post..."></textarea>
+        <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="!submitted && form.submitted"
+      >
+        Text is required!
+      </div>
+    </div>
+        <div class="form-group">
+            <textarea id="tag" #tagInput   placeholder="Type a list of tags separated by commas to identify the post (e.g. tag1,tag2,tag3)..."></textarea>
+        </div>
+
+<mat-card-actions align="end">
+
+    <button (click)="onPostClick(postInput,tagInput)" 
+    mat-flat-button color="accent" [disabled]="!form.form.valid">Post</button>
+
+</mat-card-actions>
+</form>
+<div class="alert alert-success" *ngIf="submitted">
+    Post was successfully created!
+  </div>
+</mat-card>

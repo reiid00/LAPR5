@@ -1,0 +1,14 @@
+@startuml
+autonumber
+'hide footbox
+
+actor "Utilizador autenticado/Utilizador não autenticado" as u
+
+activate u
+u->":UI": Consultar Tag cloud das tags de todas as relações
+activate ":UI"
+":UI"->":UI": Sucesso na execução da funcionalidade
+":UI"-->u: Mostra a Tag Cloud resultante da consulta
+deactivate ":UI"
+deactivate u
+@enduml

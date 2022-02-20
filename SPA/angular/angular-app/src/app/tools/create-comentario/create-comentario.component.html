@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Create Commentary</mat-card-title>
+    </mat-card-header>
+<form  #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">          
+             <textarea id="post" #commentaryInput   placeholder="Type some text for the Commentary..."></textarea>
+        <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="!submitted && form.submitted"
+      >
+        Text is required!
+      </div>
+    </div>
+        <div class="form-group">
+            <textarea id="tag" #tagInput   placeholder="Type a list of tags separated by commas to identify the commentary (e.g. tag1,tag2,tag3)..."></textarea>
+        </div>
+
+<mat-card-actions align="end">
+
+    <button (click)="onComentarioClick(commentaryInput,tagInput)" 
+    mat-flat-button color="accent" [disabled]="!form.form.valid">Comment</button>
+
+</mat-card-actions>
+</form>
+<div class="alert alert-success" *ngIf="submitted">
+    Commentary was successfully created!
+  </div>
+</mat-card>
+

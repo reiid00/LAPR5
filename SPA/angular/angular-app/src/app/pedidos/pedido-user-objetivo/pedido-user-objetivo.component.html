@@ -1,0 +1,21 @@
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>Criou o Pedido</th>
+      <th>Descrição para o utilizador</th>
+      <th>Quem aceitou o Pedido</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pedUserObjetivo of pedidosUserObjetivo; index as i">
+      <td (onCreate)="getFriend(pedUserObjetivo)">{{friendRelSelectedNome[i]}} </td>
+      <td> {{pedUserObjetivo.descricaoUserFinal}} </td>
+      <td (onCreate)="onSelectUserObjetivo(pedUserObjetivo)">{{pessoaUserInterNome[i]}}</td>
+      <td>
+        <button type="button" data-testid="buttonAceitar" class="btn btn-light mr-1"(click) = "aceitarPedidoUserObjetivo()"> Aceitar</button>
+        <button type="button" data-testid="buttonRejeitar"class="btn btn-light mr-1"(click)="deletePedido(pedUserObjetivo.id)"> Rejeitar</button>
+      </td>
+  </tbody>
+</table>
+
